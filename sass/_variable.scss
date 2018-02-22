@@ -1,0 +1,121 @@
+$fontA: Arial, 'Microsoft YaHei', 'Microsoft JhengHei', 'Hiragino Sans GB','Noto Sans JP', STHeiti, sans-serif, 'Noto Sans SC','Noto Sans TC';
+$fontB: Impact, 'Microsoft YaHei', 'Microsoft JhengHei', 'Hiragino Sans GB','Noto Sans JP', STHeiti, sans-serif, 'Noto Sans SC','Noto Sans TC';
+$common_yellow: #fea346;
+$red: #F00;
+$light_blue: #13ace4;
+$white: #fff;
+
+
+//主題顏色
+$word_color: #dbb700; //文字顏色
+$info_content: #260e01; //快速轉出 入金額列表
+$title: #dbb700; //word 文字標題顏色
+$placeholder: #e8df46; //placeholder顏色
+$darker_color: #e6bd00; //電子遊戲列表框線
+$ps_color: #dbb700;//提示訊息顏色
+$login_background: #4b2405;
+$body_bg: #000;
+$hr: #be8200;
+
+//靜態頁面, 彈跳視窗
+$static_bg: #4b2405;
+
+//電子遊戲
+$gamecard_bg: #e6bd00;
+$gamecard_hr: #147ece;
+$gamecard_hover: #e6bd00;
+$gamecard_title: #4b2405;
+$gamelist_bg: #4b2405;
+$gamelist_border: #d6aa3f;
+
+//彈跳視窗  _popoutinfo.scss
+$frame: #e6bd00; //彈跳視窗 提示訊息框
+$frame_bg: #4b2405; //背景
+$frame_title: #e6bd00; //彈跳視窗 提示訊息框標題
+
+//表單
+$form_border: #4D4E52;
+$costom_bg: #0e0516;
+
+// _jackpot.scss
+$jp_winner: #fff;
+$jp_money: #260e01;
+$jp_border: #4D4E52;
+
+// _partials.scss
+//更多遊戲
+$more_game: #e6bd00;
+$moregame_border: #e6bd00;
+
+//會員首頁上方選單
+$member_info_border:#ffdc00;
+$member_info_text:#e6bd00;
+$member_info_bg: #4b2405;
+$drop_menu: #ffdc00;
+
+//_footer.scss
+$footer_left: #e8df46; //footer左邊文字
+$footer_right_b: #f8ee75; //合作夥伴 大字
+$footer_right_s: #f1ee00; //our partner 小字
+$contact_footer: #493209;
+
+//marquee
+$date_info: #d59a22; //日期顏色
+$marquee: #deb354; //跑馬燈顏色
+$marquee_border: #4D4E52; //跑馬燈邊框
+
+//nav
+$nav_frame: #fede00; //選單顏色 on
+$nav_a: #fede00; //選單連結 on
+$nav_on_background: #4b2405; //選單背景 on
+$nav_off_background: #b27c1a; //選單背景 off
+$nav_off_border: #7f4807;
+$nav_off: #562e0a;
+
+$home_nav_a: #260e01;
+$nav_a_hover: #e6bd00;
+$nav_a_bg: #562e0a;
+
+//quickbox
+$quickbox_text: #f8ee75;
+$quickbox_a: #f1ee00;
+
+//新聞發布
+$time: #f8eb78;
+$time_bg: #643815;
+$time_border: #9b5307;
+$news_title: #e6bd00;
+$news_bg: #1f0f00;
+$news_border: #724119;
+
+//transfer
+$trans_bg: #4b2405;
+$trans_r: $white;
+
+
+
+//faq
+$faq_r_border: #724119;
+$faq_l_border: #9b5307;
+$faq_bg_r: #1f0f00;
+
+//通用表格顏色
+$table_border: #724119;
+$table_bg_r: #1f0f00;
+$table_r_border: #724119;
+$table_l_border: #9b5307;
+
+//member pages
+$mb_bg: #4b2405;
+$mb_border: #fede00;
+
+//support
+$sup_info_r: #fff;//下方資訊列右邊顏色
+$sup_info_l: #643815;//下方資訊列左邊顏色
+$sup_border_l: #9a5206;//下方資訊列邊框
+$sup_border_r: #260e01;//下方資訊列邊框
+
+//promotion
+$promotion_color: #fede00;
+
+$nav_link: #f5b419;

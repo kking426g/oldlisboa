@@ -1,0 +1,2918 @@
+@charset "UTF-8";
+@import url(/css/flexslider.css);
+/* 文字大小  高度 */
+/*超連結*/
+/*
+zoom 的缺點  以768為基準 ，所以如果用橫的看 可能會破掉 理論上!!!
+所以大於768 必須放大尺寸 以符合全部的寬度
+*/
+header {
+  background: url(/images/m/top_bk.png) 0 0 no-repeat;
+  background-size: 100%;
+  position: fixed;
+  display: block;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 0;
+  padding: 0;
+  padding-bottom: 17%;
+  z-index: 2; }
+  header button {
+    margin: 3% 1%;
+    padding: 0;
+    padding-bottom: 11%;
+    width: 11%;
+    height: 0;
+    border: none;
+    outline: 0;
+    float: left; }
+    header button.menu {
+      background: url(/images/m/Home_a03.png) center center no-repeat;
+      background-size: 100%; }
+    header button.back {
+      background: url(/images/m/Home_a02.png) center center no-repeat;
+      background-size: 100%; }
+    header button.home, header button.login {
+      float: right;
+      font-size: 22px;
+      line-height: 84px; }
+    header button.member {
+      float: right;
+      background: url(/images/m/Home_a07.png) center center no-repeat;
+      background-size: 100%; }
+  header div.logo {
+    padding: 0;
+    padding-bottom: 15%;
+    width: 39%;
+    height: 0;
+    background: url(/images/m/logo.png) center center no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    margin: 0;
+    top: 8px;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  header .mask1 {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.55); }
+  header.open .mask1 {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
+  header .language {
+       /*
+position: absolute;
+top: 10px;
+right: 5px;
+display: block;
+float: right;
+z-index: 99;
+height: 35px;
+overflow: hidden;
+padding-right: 0;
+color: #fff;
+border: solid 1px #fff;
+border-radius: 3px;
+margin-top:125px;
+li {
+    margin-left: -40px;
+    list-style-type: none;
+    padding: 0 0 3px 3px;
+    border-right: solid 1px #fff;
+    margin-right: 25px;
+    display: none;
+}
+&.hover {
+    overflow: initial;
+    height: initial;
+    background: #666;
+    li {
+        display: block;
+        opacity: 0.8;
+    }
+}
+.visit {
+    font-weight: bolder;
+    display: block;
+    &:after {
+        content: '';
+        display: inline-block;
+        border-style: solid;
+        border-width: 15px 9px 0 9px;
+        border-color: #fff transparent transparent transparent;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+    }
+}*/
+    /*手機*/
+    /*平版*/ }
+    @media (max-width: 480px) {
+      header .language {
+        width: 115px;
+        top: 0;
+        right: 5px;
+        font-size: 0.6rem; } }
+    @media (min-width: 480px) and (max-width: 992px) {
+      header .language {
+        top: 5px;
+        right: 5px; } }
+
+/*跑馬燈*/
+#marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  height: 40px;
+  top: 0;
+  background: #0f0f15;
+  position: static;
+  margin: 0;
+  width: 100%;
+  border-radius: 0; }
+  #marquee .stage {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative; }
+    #marquee .stage .showbox {
+      display: inline-block;
+      white-space: nowrap; }
+      #marquee .stage .showbox a {
+        float: left;
+        margin: 0 10px;
+        white-space: nowrap;
+        color: #D8BC4F;
+        height: 40px;
+        vertical-align: middle;
+        font-size: 28px;
+        line-height: 40px; }
+
+@keyframes openmenu {
+  0% {
+    width: 50%; }
+  100% {
+    width: 80%; } }
+@-webkit-keyframes openmenu {
+  0% {
+    width: 50%; }
+  100% {
+    width: 80%; } }
+.menu_left {
+  position: fixed;
+  width: 80%;
+  height: 100%;
+  display: none;
+  top: 0;
+  z-index: 10;
+  background: #3c2901;
+  overflow: auto; }
+  .menu_left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: -1px; }
+    .menu_left ul li {
+      background: #b49612;
+      background: -moz-linear-gradient(180deg, #b49612 0%, #f8ec89 30%, #f8ec89 51%, #b49612 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(180deg, #b49612 0%, #f8ec89 30%, #f8ec89 51%, #b49612 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(180deg, #b49612 0%, #f8ec89 30%, #f8ec89 51%, #b49612 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      margin-bottom: 1px; }
+      .menu_left ul li:first-child {
+        background: #3c2901;
+        height: 130px; }
+      .menu_left ul li a,
+      .menu_left ul li a:link,
+      .menu_left ul li a:visited {
+        display: block;
+        text-decoration: none;
+        color: #67453a;
+        height: 126px;
+        padding: 0 20px;
+        z-index: 0;
+        font-size: 40px;
+        line-height: 126px; }
+        .menu_left ul li a img,
+        .menu_left ul li a:link img,
+        .menu_left ul li a:visited img {
+          float: left;
+          height: 80px;
+          width: 80px;
+          margin: 23px 15px;
+          padding: 0; }
+        .menu_left ul li a.close_menu img,
+        .menu_left ul li a:link.close_menu img,
+        .menu_left ul li a:visited.close_menu img {
+          width: 84px;
+          height: 84px;
+          margin: 25px auto 0; }
+      .menu_left ul li .lang {
+        min-height: 127px;
+        width: 100%; }
+        .menu_left ul li .lang a,
+        .menu_left ul li .lang a:link,
+        .menu_left ul li .lang a:visited {
+          width: 80px;
+          height: 90px;
+          margin: 12px;
+          position: relative;
+          border: none;
+          line-height: 100px;
+          float: left; }
+          .menu_left ul li .lang a:not(:last-child):after,
+          .menu_left ul li .lang a:link:not(:last-child):after,
+          .menu_left ul li .lang a:visited:not(:last-child):after {
+            content: "|";
+            color: #67453a;
+            position: absolute;
+            top: 0;
+            left: 100%; }
+  .menu_left img.menulogo {
+    width: 58%;
+    margin: 9% 15%;
+    padding: 3% 0 10% 5%; }
+  .menu_left.openmenu {
+    -webkit-animation: openmenu 0.5s;
+    /* Safari 4.0 - 8.0 */
+    animation: openmenu 0.5s;
+    display: block; }
+
+.menu_right {
+  position: fixed;
+  width: 80%;
+  height: 100%;
+  display: none;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #3c2901;
+  overflow: auto; }
+  .menu_right ul {
+    position: relative;
+    list-style: none;
+    padding: 0 0 2% 0;
+    margin: 0; }
+    .menu_right ul li {
+      margin-bottom: 1px;
+      background: #b49612;
+      background: -moz-linear-gradient(180deg, #b49612 0%, #f8ec89 30%, #f8ec89 51%, #b49612 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(180deg, #b49612 0%, #f8ec89 30%, #f8ec89 51%, #b49612 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(180deg, #b49612 0%, #f8ec89 30%, #f8ec89 51%, #b49612 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+      .menu_right ul li:last-child {
+        margin-bottom: 25%; }
+        .menu_right ul li:last-child a,
+        .menu_right ul li:last-child a:link,
+        .menu_right ul li:last-child a:visited {
+          color: red; }
+      .menu_right ul li div.info {
+        cursor: pointer;
+        width: 560px;
+        height: 120px;
+        padding: 90px 0 0 55px;
+        margin: 4% auto;
+        background-color: #3c2901; }
+        .menu_right ul li div.info:after {
+          width: 84px;
+          height: 84px;
+          content: url(/images/m/top_icon_back.png);
+          position: absolute;
+          left: 10px;
+          top: 0; }
+        .menu_right ul li div.info p {
+          z-index: 0;
+          color: #fff;
+          margin: 0;
+          font-size: 42px;
+          line-height: 54px; }
+          .menu_right ul li div.info p span.sys_txt_balance {
+            display: inline-block;
+            display: inline-flex;
+            max-width: 260px;
+            overflow: hidden;
+            position: relative; }
+      .menu_right ul li a,
+      .menu_right ul li a:link,
+      .menu_right ul li a:visited {
+        display: block;
+        text-decoration: none;
+        color: #67453a;
+        height: 126px;
+        padding: 0 20px;
+        z-index: 0;
+        font-size: 40px;
+        line-height: 126px; }
+        .menu_right ul li a img,
+        .menu_right ul li a:link img,
+        .menu_right ul li a:visited img {
+          float: left;
+          height: 80px;
+          width: 80px;
+          margin: 23px 15px;
+          padding: 0; }
+  .menu_right.openmenu {
+    -webkit-animation: openmenu 0.5s;
+    /* Safari 4.0 - 8.0 */
+    animation: openmenu 0.5s;
+    display: block; }
+
+div.mask {
+  width: 0;
+  height: 0;
+  display: none; }
+  div.mask button.xx {
+    display: none;
+    background: url(/images/m/shut_down.png) 0 0 no-repeat;
+    background-size: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: none;
+    outline: 0;
+    width: 86px;
+    height: 86px;
+    margin: 3% 1%;
+    padding: 0; }
+  div.mask div.mbox {
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1em;
+    margin: 11% 0; }
+    div.mask div.mbox h2 {
+      color: #fec502;
+      letter-spacing: 0.3em;
+      font-size: 40px;
+      line-height: 50px; }
+    div.mask div.mbox div.msg {
+      min-height: 120px;
+      max-height: 80%; }
+      div.mask div.mbox div.msg p {
+        width: 100%;
+        font-size: 32px;
+        line-height: 50px; }
+  div.mask div.card {
+    margin: 20% auto auto;
+    color: #ffffff;
+    display: inline-block;
+    position: static;
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1em; }
+    div.mask div.card img {
+      width: 60%;
+      margin: 0 auto; }
+    div.mask div.card button.fav {
+      display: block;
+      padding: 0 25px;
+      height: 80px;
+      border: none;
+      position: fixed;
+      top: 23px;
+      left: 15px; }
+      div.mask div.card button.fav.true {
+        background-size: 100%; }
+      div.mask div.card button.fav.false {
+        background-size: 100%; }
+    div.mask div.card button.go {
+      display: block;
+      width: 342px;
+      height: 80px;
+      margin: 0 auto 15px;
+      border: none; }
+      div.mask div.card button.go._login {
+        background: url(/images/m/Information_page-A03.jpg) 0 0 no-repeat;
+        background-size: 100%; }
+      div.mask div.card button.go._signup {
+        background: url(/images/m/Information_page-A04.jpg) 0 0 no-repeat;
+        background-size: 100%; }
+      div.mask div.card button.go._withdrawal {
+        background-size: 100%; }
+      div.mask div.card button.go._start {
+        background-size: 100%; }
+    div.mask div.card button.trans {
+      display: block;
+      width: 595px;
+      height: 80px;
+      margin: 0 auto 23px auto;
+      border: 0;
+      outline: 0; }
+    div.mask div.card div.inputgroup.trans {
+      display: block;
+      width: 590px;
+      height: 70px;
+      margin: 10px auto 20px auto;
+      padding: 5px; }
+      div.mask div.card div.inputgroup.trans.hall {
+        background: url(/images/m/Amount_transferred-A02.jpg) 0 0 no-repeat;
+        background-size: 100%; }
+        div.mask div.card div.inputgroup.trans.hall span {
+          color: #000000;
+          width: 180px;
+          padding: 5px;
+          margin: 0 5px;
+          height: 60px;
+          float: left;
+          font-size: 32px;
+          line-height: 72px; }
+        div.mask div.card div.inputgroup.trans.hall input {
+          border: 0;
+          outline: 0;
+          width: 370px;
+          padding: 5px;
+          margin: 0 5px;
+          height: 60px;
+          float: left;
+          font-size: 32px;
+          line-height: 72px; }
+    div.mask div.card button.def,
+    div.mask div.card div.igroup {
+      display: block;
+      width: 590px;
+      height: 70px;
+      margin: 10px auto 20px auto;
+      padding: 5px; }
+    div.mask div.card input.trans {
+      display: block;
+      width: 57%;
+      height: 84px;
+      margin: 0 auto 23px auto;
+      border: 0;
+      outline: 0;
+      font-size: 32px;
+      line-height: 80px; }
+      div.mask div.card input.trans.account {
+        background-size: 100%; }
+      div.mask div.card input.trans.money {
+        background-size: 100%; }
+    div.mask div.card h1 {
+      color: #ffffff;
+      letter-spacing: 0.3em;
+      font-size: 40px;
+      line-height: 50px; }
+    div.mask div.card h3 {
+      text-align: left;
+      width: 600px;
+      margin: 0 auto;
+      color: #ffffff;
+      font-size: 24px;
+      line-height: 30px; }
+    div.mask div.card div.msg {
+      min-height: 120px;
+      max-height: 668px; }
+      div.mask div.card div.msg p {
+        width: 100%;
+        font-size: 32px;
+        line-height: 50px; }
+
+article.login {
+  color: #fff;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-right: -50%;
+  max-width: 78%;
+  overflow: hidden;
+  text-align: center; }
+  article.login p {
+    width: 100%;
+    font-size: 38px;
+    line-height: 50px; }
+  article.login input {
+    width: 95%;
+    height: 63px;
+    border: solid 2px #c59c1c;
+    padding: 0;
+    margin: 0 0 5% 0;
+    font-size: 32px;
+    line-height: 63px; }
+    article.login input.sys_Captcha {
+      width: 50%; }
+  article.login img#captcha_one {
+    border: solid 2px #959595;
+    margin: 0 0 -3.7% 0;
+    width: 45%;
+    min-width: 45%;
+    max-width: 45%;
+    height: 63px !important; }
+  article.login button {
+    width: 100%;
+    height: 80px;
+    margin: 0 0 40px 0;
+    border: none;
+    border-radius: 40px; }
+
+article.success {
+  color: #fff;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-right: -50%;
+  width: 100%;
+  overflow: hidden;
+  text-align: center; }
+  article.success h2 {
+    width: 100%;
+    padding: 10px 0;
+    color: #ffc702;
+    font-size: 40px;
+    line-height: 50px; }
+  article.success p {
+    width: 80%;
+    margin: 10px 10%;
+    font-size: 32px;
+    line-height: 50px; }
+  article.success button {
+    width: 100%;
+    height: 77px;
+    margin: 0 0 38px 0;
+    border: none; }
+    article.success button.go_deposit {
+      background: url(/images/m/Join_Membership-B01.jpg) 0 0 no-repeat;
+      background-size: 100%; }
+    article.success button.go_around {
+      background: url(/images/m/Join_Membership-B02.jpg) 0 0 no-repeat;
+      background-size: 100%; }
+
+@media (orientation: landscape) {
+  article.lightbox {
+    height: 100%;
+    overflow-y: auto; } }
+
+#CasinoGames div.title img {
+  height: 46px; }
+
+div.sreach {
+  height: 0;
+  padding-bottom: 14%;
+  margin: 0 3%; }
+  div.sreach input.isreach {
+    display: block;
+    margin: 0 auto;
+    width: 68%;
+    padding-left: 10%;
+    height: 0;
+    padding-bottom: 10.4%;
+    outline: 0;
+    border: 0;
+    background: url(/images/m/my_collection-A01.png) 0 0 no-repeat;
+    background-size: 100%;
+    font-size: 32px;
+    line-height: 50px; }
+  div.sreach input.sreachtxt {
+    float: left;
+    width: 55%;
+    height: 0;
+    padding: 5.2% 0;
+    outline: 0;
+    border: solid 1px #250d00;
+    background: #ffffff;
+    font-size: 32px;
+    line-height: 50px; }
+  div.sreach button.sreach {
+    float: right;
+    width: 39%;
+    height: 0;
+    padding-bottom: 10.4%;
+    margin: 0;
+    background: url(/images/m/Inquire.jpg) 0 0 no-repeat;
+    background-size: 100%;
+    color: #fff;
+    letter-spacing: 5px;
+    font-size: 32px;
+    line-height: 75px; }
+
+.gamelist {
+  margin: 1% 2%;
+  min-height: 500px; }
+
+div.game {
+  display: inline-block;
+  width: 30%;
+  margin: 1.5%;
+  overflow: hidden;
+  background: #ae7b10; }
+  div.game div.pbox {
+    margin: 2%;
+    position: relative; }
+    div.game div.pbox:before {
+      content: "";
+      display: block;
+      padding-top: 75%;
+      /*Aspect Ratio 4:3 --> 100 vs 75 */ }
+    div.game div.pbox img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0; }
+  div.game div.pitem div.ptag {
+    text-align: center;
+    margin: 0 1%;
+    height: 0;
+    padding-bottom: 15%;
+    border-bottom: solid 1px #141510;
+    width: 98%; }
+    div.game div.pitem div.ptag span {
+      display: inline-block;
+      height: 35px;
+      line-height: 35px;
+      border-radius: 100%;
+      color: #fff;
+      padding: 0;
+      float: left;
+      margin: 0 2.5%; }
+      div.game div.pitem div.ptag span.hot {
+        background: #ac309a;
+        background-size: 100%; }
+      div.game div.pitem div.ptag span.choice {
+        background: #347F0E;
+        background-size: 100%; }
+      div.game div.pitem div.ptag span.newest {
+        background: #6e5838;
+        background-size: 100%; }
+  div.game p {
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    padding: 0.5em;
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px; }
+
+div.gameSP {
+  display: inline-block;
+  width: 692px;
+  margin: 38px 32px;
+  background: #ae7b10;
+  position: relative; }
+  div.gameSP:nth-child(1) {
+    margin-top: 50px; }
+  div.gameSP:nth-last-child(1) {
+    margin-bottom: 60px; }
+  div.gameSP div.pbox {
+    margin: 8px; }
+    div.gameSP div.pbox img {
+      width: 100%; }
+  div.gameSP div.pitem div.ptag {
+    text-align: center;
+    height: 31px;
+    margin: 0 2px;
+    padding-bottom: 1px;
+    border-bottom: solid 1px #141510;
+    width: 642px; }
+  div.gameSP p {
+    color: #ffffff;
+    background: linear-gradient(45deg, transparent 38px, #ae7b10 0) bottom left;
+    position: absolute;
+    height: 23px;
+    width: 169px;
+    bottom: -50px;
+    right: 0;
+    display: block;
+    padding: 15px;
+    margin: 0;
+    font-weight: bold;
+    text-align: right;
+    white-space: nowrap;
+    font-size: 28px;
+    line-height: 28px; }
+    div.gameSP p.title {
+      background: linear-gradient(-135deg, transparent 38px, #ae7b10 0) top right;
+      position: absolute;
+      height: 23px;
+      width: 269px;
+      min-width: 169px;
+      top: -50px;
+      left: 0;
+      text-align: left;
+      display: block;
+      padding: 15px;
+      margin: 0; }
+
+article.signup {
+  background: #000000; }
+  article.signup h2 {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3% 0;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 36px; }
+  article.signup p {
+    color: #ffffff;
+    width: 80%;
+    margin: 0 auto 5% auto;
+    font-size: 32px;
+    line-height: 40px; }
+    article.signup p span {
+      float: right;
+      width: 90%; }
+      article.signup p span a {
+        color: #0e8ee5; }
+        article.signup p span a:link, article.signup p span a:active, article.signup p span a:focus {
+          color: #0e8ee5;
+          text-decoration: none; }
+        article.signup p span a:hover {
+          color: #0e8ee5;
+          text-decoration: none; }
+        article.signup p span a:visited, article.signup p span a.visited {
+          color: #0e8ee5; }
+  article.signup img#captcha_one_sign {
+    height: 80px;
+    position: absolute;
+    left: 0;
+    width: 45%; }
+  article.signup input {
+    font-size: 32px;
+    line-height: 50px; }
+    article.signup input#Captcha {
+      width: 30%;
+      width: calc( 45% - 4px);
+      height: 0;
+      padding: 10.3% 0 11.3% 55%;
+      background-size: 100%; }
+    article.signup input[type=checkbox] {
+      width: 0;
+      height: 3px;
+      margin: 0;
+      padding: 0;
+      float: left;
+      border: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -o-appearance: none; }
+    article.signup input[type=checkbox] + label.squaredFour, article.signup input[type=checkbox] + label + label.squaredFour {
+      width: 7%;
+      height: 0;
+      padding-bottom: 6%;
+      display: inline-block;
+      background: url(/images/m/Join_Membership-A07.png) 0 0 no-repeat;
+      background-size: 100%; }
+    article.signup input[type=checkbox]:checked + label.squaredFour, article.signup input[type=checkbox]:checked + label + label.squaredFour {
+      width: 7%;
+      height: 0;
+      padding-bottom: 6%;
+      display: inline-block;
+      background: url(/images/m/Join_Membership-A06.png) 0 0 no-repeat;
+      background-size: 100%; }
+  article.signup button {
+    display: block;
+    width: 80%;
+    width: calc( 80% - 4px);
+    height: 0;
+    padding-bottom: 10.4%;
+    margin: 0 auto;
+    border: none;
+    line-height: 2em; }
+
+article.pages {
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -ms-transition: 0.8s;
+  transition: 0.8s; }
+  article.pages select,
+  article.pages input {
+    color: inherit; }
+  article.pages button.def {
+    width: 80%;
+    margin: 0 10% 5%;
+    border: none;
+    border-radius: 40px;
+    color: #000;
+    text-shadow: 1px 1px 1px #111111;
+    background: #c19e67;
+    background: -moz-linear-gradient(top, #c19e67 1%, #f8ec88 45%, #f8ec88 55%, #bea120 99%);
+    background: -webkit-linear-gradient(top, #c19e67 1%, #f8ec88 45%, #f8ec88 55%, #bea120 99%);
+    background: linear-gradient(to bottom, #c19e67 1%, #f8ec88 45%, #f8ec88 55%, #bea120 99%);
+    font-size: 42px;
+    line-height: 80px; }
+  article.pages nav.tab {
+    width: 100%;
+    margin-bottom: 3px; }
+    article.pages nav.tab div.slider {
+      position: relative;
+      overflow: hidden;
+      min-width: 100%; }
+      article.pages nav.tab div.slider div.turnL {
+        background: url(/images/m/icon_arrow_01.png) center center no-repeat;
+        background-size: 100%;
+        color: #ffffff;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 32px;
+        height: 85px;
+        width: 31px; }
+      article.pages nav.tab div.slider div.turnR {
+        background: url(/images/m/icon_arrow_02.png) center center no-repeat;
+        background-size: 100%;
+        color: #ffffff;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 85px;
+        width: 31px; }
+      article.pages nav.tab div.slider ul {
+        list-style-type: none;
+        min-width: 768px;
+        width: 1344px;
+        height: 85px;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        display: block;
+        -webkit-transition: 0.8s;
+        -moz-transition: 0.8s;
+        -ms-transition: 0.8s;
+        transition: 0.8s; }
+        article.pages nav.tab div.slider ul li {
+          display: block;
+          color: #ffffff;
+          width: 190px;
+          margin: 1px;
+          float: left;
+          text-align: center;
+          height: 85px;
+          font-size: 24px;
+          line-height: 85px; }
+          article.pages nav.tab div.slider ul li a {
+            white-space: nowrap;
+            overflow: hidden;
+            overflow-x: scroll;
+            display: block;
+            margin: 0 10px; }
+          article.pages nav.tab div.slider ul li a {
+            color: #ffffff; }
+            article.pages nav.tab div.slider ul li a:link, article.pages nav.tab div.slider ul li a:active, article.pages nav.tab div.slider ul li a:focus {
+              color: #ffffff;
+              text-decoration: none; }
+            article.pages nav.tab div.slider ul li a:hover {
+              color: #ffffff;
+              text-decoration: none; }
+            article.pages nav.tab div.slider ul li a:visited, article.pages nav.tab div.slider ul li a.visited {
+              color: #ffffff; }
+          article.pages nav.tab div.slider ul li:hover a, article.pages nav.tab div.slider ul li.visited a {
+            color: #ffffff; }
+            article.pages nav.tab div.slider ul li:hover a:link, article.pages nav.tab div.slider ul li:hover a:active, article.pages nav.tab div.slider ul li:hover a:focus, article.pages nav.tab div.slider ul li.visited a:link, article.pages nav.tab div.slider ul li.visited a:active, article.pages nav.tab div.slider ul li.visited a:focus {
+              color: #ffffff;
+              text-decoration: none; }
+            article.pages nav.tab div.slider ul li:hover a:hover, article.pages nav.tab div.slider ul li.visited a:hover {
+              color: #ffffff;
+              text-decoration: none; }
+            article.pages nav.tab div.slider ul li:hover a:visited, article.pages nav.tab div.slider ul li:hover a.visited, article.pages nav.tab div.slider ul li.visited a:visited, article.pages nav.tab div.slider ul li.visited a.visited {
+              color: #ffffff; }
+          article.pages nav.tab div.slider ul li:nth-child(4n+1) {
+            background: url(/images/m/Featured_Games-B01.jpg) 0 0 no-repeat;
+            background-size: 100%; }
+            article.pages nav.tab div.slider ul li:nth-child(4n+1):hover, article.pages nav.tab div.slider ul li:nth-child(4n+1).visited {
+              background: url(/images/m/Featured_Games-B02.jpg) 0 0 no-repeat;
+              background-size: 100%; }
+          article.pages nav.tab div.slider ul li:nth-child(4n+2) {
+            background: url(/images/m/Featured_Games-B03.jpg) 0 0 no-repeat;
+            background-size: 100%; }
+            article.pages nav.tab div.slider ul li:nth-child(4n+2):hover, article.pages nav.tab div.slider ul li:nth-child(4n+2).visited {
+              background: url(/images/m/Featured_Games-B04.jpg) 0 0 no-repeat;
+              background-size: 100%; }
+          article.pages nav.tab div.slider ul li:nth-child(4n+3) {
+            background: url(/images/m/Featured_Games-B05.jpg) 0 0 no-repeat;
+            background-size: 100%; }
+            article.pages nav.tab div.slider ul li:nth-child(4n+3):hover, article.pages nav.tab div.slider ul li:nth-child(4n+3).visited {
+              background: url(/images/m/Featured_Games-B06.jpg) 0 0 no-repeat;
+              background-size: 100%; }
+          article.pages nav.tab div.slider ul li:nth-child(4n+4) {
+            background: url(/images/m/Featured_Games-B07.jpg) 0 0 no-repeat;
+            background-size: 100%; }
+            article.pages nav.tab div.slider ul li:nth-child(4n+4):hover, article.pages nav.tab div.slider ul li:nth-child(4n+4).visited {
+              background: url(/images/m/Featured_Games-B08.jpg) 0 0 no-repeat;
+              background-size: 100%; }
+          article.pages nav.tab div.slider ul li.comingsoon {
+            opacity: 0.5; }
+  article.pages .pages_header {
+    position: relative; }
+    article.pages .pages_header .pages_header_title {
+      color: #fff;
+      position: absolute;
+      left: 0;
+      font-size: 40px;
+      letter-spacing: 2px;
+      padding: 0 60px 0 40px;
+      height: 105px;
+      line-height: 105px;
+      background: url(/images/m/page_title_bg.png) 0 0 no-repeat;
+      background-size: 100% 100%; }
+  article.pages img.bar {
+    width: 100%; }
+  article.pages div.title {
+    width: 100%;
+    text-align: center;
+    color: #f9f077;
+    padding: 0.8em 0 0.3em;
+    letter-spacing: 0.3em;
+    font-size: 42px;
+    line-height: 50px; }
+    article.pages div.title span {
+      height: 20px; }
+      article.pages div.title span img {
+        width: 100%; }
+  article.pages div.word {
+    width: 94%;
+    margin: 0 3%;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 1.4em; }
+    article.pages div.word input {
+      color: #222222; }
+    article.pages div.word h4 {
+      color: #ffc600;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 30px; }
+    article.pages div.word h3 {
+      color: #d1d0ce;
+      font-size: 24px;
+      line-height: 30px; }
+    article.pages div.word h2 {
+      text-align: center;
+      color: #d1d0ce;
+      font-weight: normal;
+      font-size: 26px;
+      line-height: 30px; }
+      article.pages div.word h2.txtleft {
+        text-align: left; }
+  article.pages div.tab_page {
+    min-height: 500px;
+    margin: 0 10px; }
+  article.pages div.ps {
+    width: 96%;
+    width: calc( 96% - 4px);
+    padding: 2%;
+    margin-top: 3%;
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 32px; }
+    article.pages div.ps h3 {
+      color: #fedc00; }
+
+#News div.item {
+  padding-left: 7.5%;
+  position: relative;
+  margin-bottom: 2%; }
+  #News div.item:before {
+    content: 'News';
+    height: 100%;
+    height: calc(100% - 10px);
+    border: solid 1px #965106;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6.5%;
+    background: #77431c;
+    background: -moz-linear-gradient(top, #77431c 0%, #381800 100%);
+    background: -webkit-linear-gradient(top, #77431c 0%, #381800 100%);
+    background: linear-gradient(to bottom, #77431c 0%, #381800 100%);
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
+    padding: 10px 0 0 0;
+    font-size: 20px;
+    line-height: 30px; }
+  #News div.item span.dateitem,
+  #News div.item div.subs,
+  #News div.item h5 {
+    border: solid 1px #965106;
+    display: block;
+    margin: 0.2em 0;
+    padding: 0.5em; }
+  #News div.item span.dateitem {
+    background: #724119;
+    color: #faea79;
+    font-size: 20px;
+    line-height: 30px; }
+  #News div.item h5 {
+    background: #1f0f00;
+    font-weight: normal;
+    color: #fec502;
+    position: relative;
+    padding-right: 54px;
+    font-size: 20px;
+    line-height: 30px; }
+    #News div.item h5:after {
+      content: ' ';
+      background: url(/images/m/News_icon_down.png) center center no-repeat;
+      background-size: 100%;
+      position: absolute;
+      top: 0;
+      right: 8px;
+      width: 46px;
+      height: 46px; }
+  #News div.item div.subs {
+    display: none;
+    background: #fec502;
+    font-size: 20px;
+    line-height: 30px; }
+  #News div.item.visited h5:after {
+    background: url(/images/m/News_icon_up.png) center center no-repeat;
+    background-size: 100%; }
+  #News div.item.visited div.subs {
+    display: block; }
+
+#Support div.contact_list {
+  background-size: 100%;
+  width: 659px;
+  height: 345px;
+  margin: 3% auto; }
+  #Support div.contact_list p {
+    height: 60px;
+    padding: 0px 0px 0px 35%;
+    margin: 5px 0;
+    color: #000000;
+    font-size: 16px;
+    line-height: 60px;
+    background: #fff; }
+  #Support div.contact_list label {
+    height: 60px;
+    width: 34%;
+    line-height: 60px;
+    border: none;
+    color: #5c3507;
+    font-size: 16px;
+    font-weight: 800; }
+
+#Faq div.item {
+  padding-left: 7.5%;
+  position: relative;
+  margin-bottom: 2%; }
+  #Faq div.item div.subs,
+  #Faq div.item h5 {
+    border: solid 1px #965106;
+    display: block;
+    margin: 0.2em 0;
+    padding: 0.5em; }
+  #Faq div.item h5 {
+    background: #1f0f00;
+    color: #fec502;
+    border: solid 1px #965106;
+    position: relative;
+    padding-right: 7%;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px; }
+    #Faq div.item h5:before {
+      content: 'Q';
+      border: solid 1px #965106;
+      color: #ffffff;
+      line-height: 2em;
+      height: 2em;
+      display: block;
+      position: absolute;
+      left: -7.5%;
+      top: 0;
+      width: 6.5%;
+      padding: 1px 0;
+      text-align: center;
+      background: #77431c;
+      background: -moz-linear-gradient(top, #77431c 0%, #381800 100%);
+      background: -webkit-linear-gradient(top, #77431c 0%, #381800 100%);
+      background: linear-gradient(to bottom, #77431c 0%, #381800 100%); }
+    #Faq div.item h5:after {
+      content: ' ';
+      background: url(/images/m/News_icon_down.png) center center no-repeat;
+      background-size: 100%;
+      position: absolute;
+      top: 0;
+      right: 1%;
+      width: 2em;
+      height: 2em; }
+  #Faq div.item div.subs {
+    display: none;
+    position: relative;
+    background: #1f0f00;
+    min-height: 5em;
+    font-size: 20px;
+    line-height: 30px; }
+    #Faq div.item div.subs:before {
+      content: 'ANSWER';
+      height: calc(100% - 0.5em);
+      border: solid 1px #965106;
+      display: block;
+      position: absolute;
+      left: -7.5%;
+      top: 0;
+      width: 6.5%;
+      background: #77431c;
+      background: -moz-linear-gradient(top, #77431c 0%, #381800 100%);
+      background: -webkit-linear-gradient(top, #77431c 0%, #381800 100%);
+      background: linear-gradient(to bottom, #77431c 0%, #381800 100%);
+      -webkit-writing-mode: vertical-lr;
+      writing-mode: vertical-lr;
+      line-height: 50px;
+      padding: 10px 0 0 0; }
+  #Faq div.item.visited h5:after {
+    background: url(/images/m/News_icon_up.png) center center no-repeat;
+    background-size: 100%; }
+  #Faq div.item.visited div.subs {
+    display: block; }
+  #Faq div.item hr {
+    height: 0; }
+
+#Promotions select {
+  background: #ffffff;
+  margin: 2% auto;
+  width: 78%;
+  padding-left: 28%;
+  display: block;
+  height: 0;
+  padding-bottom: 10.4%;
+  border: none;
+  outline: 0;
+  font-size: 32px;
+  line-height: 50px; }
+  #Promotions select.promo_sel {
+    background: url(/images/m/The_course_of_the_game-A04.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+#Promotions button {
+  display: block;
+  width: 80%;
+  height: 0;
+  padding-bottom: 10.4%;
+  margin: 0 auto 2%;
+  border: none; }
+  #Promotions button.return {
+    background: url(/images/m/Amount_transferred-A06.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+#Promotions div.promo {
+  background: #2b1601;
+  text-align: center;
+  width: 90%;
+  margin: 5%;
+  padding-bottom: 3%; }
+  #Promotions div.promo img {
+    width: 100%; }
+  #Promotions div.promo p {
+    margin: 0;
+    padding: 0;
+    color: #faf1ab;
+    margin: 1% 0;
+    font-size: 30px;
+    line-height: 32px; }
+  #Promotions div.promo div.tbox {
+    background: #000000;
+    border: solid 1px #fedc00;
+    margin: 0 auto;
+    padding: 3%;
+    width: 80%;
+    text-align: center; }
+    #Promotions div.promo div.tbox span.num {
+      font-size: 36px;
+      line-height: 40px;
+      background: #fedc00;
+      color: #1c0b01;
+      padding: 0.3em; }
+    #Promotions div.promo div.tbox span.unit {
+      font-size: 18px;
+      line-height: 1em;
+      color: #fedc00; }
+#Promotions div#promo_Detial {
+  padding: 0 5%;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 32px; }
+
+#GameLogs #log {
+  margin: 15px 0;
+  max-height: 1000px;
+  overflow: auto; }
+#GameLogs button {
+  display: block;
+  width: 610px;
+  height: 80px;
+  margin: 0 auto 15px;
+  border: none;
+  border-radius: 42px; }
+  #GameLogs button.sys_gamelog_submit {
+    background-size: 100%; }
+  #GameLogs button.return {
+    background: url(/images/m/Amount_transferred-A06.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+#GameLogs .table {
+  margin: 23px auto;
+  display: block; }
+  #GameLogs .table .col {
+    float: left;
+    padding-top: 60px;
+    color: #808080;
+    text-align: center;
+    width: 165px;
+    height: 60px;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 60px; }
+    #GameLogs .table .col.topic {
+      height: 184px;
+      line-height: 184px;
+      width: 92px; }
+    #GameLogs .table .col.w35 {
+      width: 269px; }
+  #GameLogs .table.b01 {
+    width: 691px;
+    height: 246px;
+    background: url(/images/m/The_course_of_the_game-B01.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+
+#AccountRecords #record {
+  margin: 15px 0;
+  max-height: 640px;
+  overflow: auto; }
+#AccountRecords button {
+  display: block;
+  width: 610px;
+  height: 80px;
+  margin: 0 auto 15px;
+  border: none; }
+#AccountRecords label {
+  position: absolute;
+  left: 10%;
+  width: 220px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  color: #4a2405; }
+#AccountRecords input {
+  display: block;
+  width: 388px;
+  padding-left: 223px;
+  height: 80px;
+  margin: 0 auto 23px auto;
+  border: 0;
+  outline: 0;
+  font-size: 32px;
+  line-height: 50px; }
+  #AccountRecords input.sys_accountrecord_date_begin {
+    letter-spacing: 8px;
+    background: url(/images/m/form_bg01.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+  #AccountRecords input.sys_accountrecord_date_end {
+    letter-spacing: 8px;
+    background: url(/images/m/form_bg01.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+#AccountRecords select {
+  background: #ffffff;
+  margin: 15px auto;
+  width: 600px;
+  padding-left: 215px;
+  display: block;
+  height: 80px;
+  border: none;
+  outline: 0;
+  font-size: 32px;
+  line-height: 50px; }
+  #AccountRecords select.plat {
+    background: url(/images/m/The_course_of_the_game-A03.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+  #AccountRecords select.type {
+    background: url(/images/m/The_course_of_the_game-A04.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+#AccountRecords .table {
+  margin: 25px auto 50px auto;
+  display: block;
+  text-align: center; }
+  #AccountRecords .table tr {
+    height: 60px; }
+    #AccountRecords .table tr td {
+      width: 230px;
+      height: 60px;
+      border: solid 2px #6a3c17;
+      font-size: 24px;
+      font-weight: 800;
+      overflow-x: scroll; }
+  #AccountRecords .table tr:nth-child(odd) {
+    background: #c59c1b;
+    color: #4a2405; }
+  #AccountRecords .table tr:nth-child(even) {
+    background: #fff;
+    color: #4a2405; }
+  #AccountRecords .table .col {
+    float: left;
+    padding-top: 60px;
+    color: #808080;
+    text-align: center;
+    width: 246px;
+    height: 60px;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 60px; }
+    #AccountRecords .table .col.topic {
+      height: 184px;
+      line-height: 184px;
+      width: 196px; }
+  #AccountRecords .table.b01 {
+    width: 697px;
+    height: 245px;
+    background-size: 100%; }
+
+#MyAccount table#c02,
+#MyAccount table#c03 {
+  width: 615px;
+  margin: 38px auto;
+  border-spacing: 6px;
+  font-size: 24px;
+  line-height: 60px; }
+  #MyAccount table#c02 tr th,
+  #MyAccount table#c03 tr th {
+    background: #c59c1c;
+    border: solid 1px #d3b454;
+    color: #4a2508; }
+  #MyAccount table#c02 tr td,
+  #MyAccount table#c03 tr td {
+    background: #ffffff;
+    border: solid 1px #d3b454;
+    color: #4a2508;
+    text-align: center; }
+#MyAccount .table {
+  margin: 23px auto;
+  display: block; }
+  #MyAccount .table .col {
+    float: left;
+    padding-top: 61px;
+    color: #808080;
+    text-align: center;
+    width: 214px;
+    height: 61px;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 60px; }
+    #MyAccount .table .col.time {
+      line-height: 27px;
+      margin: 8px 0;
+      height: 46px; }
+    #MyAccount .table .col.topic {
+      height: 292px;
+      line-height: 292px;
+      width: 77px; }
+  #MyAccount .table .col2 {
+    float: left;
+    padding-top: 75px;
+    color: #808080;
+    text-align: center;
+    width: 192px;
+    height: 84px;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 84px; }
+    #MyAccount .table .col2.topic {
+      height: 238px;
+      line-height: 238px; }
+  #MyAccount .table.c02 {
+    width: 722px;
+    height: 384px;
+    background: url(/images/m/my_account-C02jpg.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+  #MyAccount .table.c03 {
+    width: 600px;
+    height: 315px;
+    background: url(/images/m/my_account-C03jpg.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+#MyAccount .table2 {
+  margin: 23px auto;
+  padding: 138px 0 0 169px;
+  display: block;
+  width: 438px;
+  height: 338px;
+  background: url(/images/m/my_account-B01jpg.jpg) 0 0 no-repeat;
+  background-size: 100%; }
+  #MyAccount .table2 .col {
+    float: left;
+    color: #808080;
+    text-align: center;
+    width: 218px;
+    height: 84px;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 84px; }
+    #MyAccount .table2 .col.time {
+      line-height: 31px;
+      margin: 8px 0;
+      height: 69px; }
+    #MyAccount .table2 .col.last {
+      width: 438px; }
+#MyAccount input {
+  display: block;
+  height: 80px;
+  outline: 0;
+  font-size: 32px;
+  line-height: 80px; }
+#MyAccount button {
+  display: block;
+  width: 610px;
+  height: 80px;
+  margin: 0 auto 15px;
+  border: none; }
+  #MyAccount button.return {
+    background-size: 100%; }
+#MyAccount label.long {
+  left: 11%;
+  width: 300px;
+  font-size: 29px; }
+#MyAccount table.effect {
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  color: #4b2705;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center; }
+  #MyAccount table.effect tr:nth-child(1) {
+    background: #6a3c17;
+    color: #fff;
+    letter-spacing: 3px; }
+  #MyAccount table.effect tr:nth-child(2) td:nth-child(2), #MyAccount table.effect tr:nth-child(2) td:nth-child(3) {
+    background: #c59b1d; }
+  #MyAccount table.effect tr {
+    background: #c59b1d; }
+    #MyAccount table.effect tr td:nth-child(2), #MyAccount table.effect tr td:nth-child(3) {
+      background: #fff; }
+  #MyAccount table.effect td {
+    border: solid 1px #6a3c17; }
+
+#MyMessage div.tab_page {
+  padding: 3%; }
+#MyMessage .msgbox {
+  padding: 2% 0;
+  padding-left: 10%;
+  position: relative; }
+  #MyMessage .msgbox .check {
+    display: block;
+    position: absolute;
+    left: 1%;
+    top: 3%;
+    width: 8%;
+    height: 0;
+    padding-bottom: 8%; }
+  #MyMessage .msgbox .msg_title {
+    background: #7f7f7f;
+    padding: 2%;
+    font-size: 24px;
+    line-height: 30px; }
+  #MyMessage .msgbox .msg_content {
+    display: none;
+    padding: 2%;
+    background: #cfcfcf;
+    font-size: 24px;
+    line-height: 30px; }
+#MyMessage p {
+  color: #eeeeee;
+  font-size: 32px;
+  line-height: 50px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center; }
+  #MyMessage p.txt {
+    width: 10%;
+    display: inline-block;
+    color: #ffdc00; }
+#MyMessage button {
+  display: block;
+  width: 80%;
+  width: calc( 80% - 4px);
+  height: 0;
+  padding-bottom: 10.4%;
+  margin: 0 auto 2%;
+  border-radius: 5%;
+  border: none;
+  line-height: 2em; }
+  #MyMessage button.sel {
+    display: inline-block;
+    width: 22%;
+    width: calc( 22% - 4px);
+    font-size: 30px;
+    line-height: 70px;
+    margin: 3% auto 2%;
+    border: none; }
+    #MyMessage button.sel.all {
+      width: auto; }
+    #MyMessage button.sel.reply {
+      float: right;
+      background-size: 100%; }
+#MyMessage div.inputgroup,
+#MyMessage input {
+  display: block;
+  width: 51%;
+  width: calc( 51% - 4px);
+  padding-left: 29%;
+  height: 0;
+  padding: 5.2% 0;
+  margin: 0 auto 3% auto;
+  border: 0;
+  outline: 0;
+  font-size: 32px;
+  line-height: 50px; }
+  #MyMessage div.inputgroup.amount_acc,
+  #MyMessage input.amount_acc {
+    padding-left: 46%;
+    width: 33%;
+    width: calc( 33% - 4px);
+    background: url(/images/m/Platform_transfer-A01jpg.png) 0 0 no-repeat;
+    background-size: 100%; }
+  #MyMessage div.inputgroup#message_title,
+  #MyMessage input#message_title {
+    width: 80%;
+    display: inline-block;
+    margin: 0 0 0 6%;
+    padding-left: 5px; }
+  #MyMessage div.inputgroup[type=checkbox],
+  #MyMessage input[type=checkbox] {
+    width: 0;
+    height: 3px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    border: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none; }
+  #MyMessage div.inputgroup[type=checkbox] + label.squaredFour, #MyMessage div.inputgroup[type=checkbox] + label + label.squaredFour,
+  #MyMessage input[type=checkbox] + label.squaredFour,
+  #MyMessage input[type=checkbox] + label + label.squaredFour {
+    width: 56px;
+    height: 46px;
+    display: inline-block;
+    background: url(/images/m/Join_Membership-A07.png) 0 0 no-repeat;
+    background-size: 100%; }
+  #MyMessage div.inputgroup[type=checkbox]:checked + label.squaredFour, #MyMessage div.inputgroup[type=checkbox]:checked + label + label.squaredFour,
+  #MyMessage input[type=checkbox]:checked + label.squaredFour,
+  #MyMessage input[type=checkbox]:checked + label + label.squaredFour {
+    width: 56px;
+    height: 46px;
+    display: inline-block;
+    background: url(/images/m/Join_Membership-A06.png) 0 0 no-repeat;
+    background-size: 100%; }
+#MyMessage textarea {
+  display: block;
+  width: 95%;
+  height: 0;
+  padding-bottom: 40%;
+  margin: 1% auto 3% auto;
+  border: 0;
+  outline: 0;
+  font-size: 32px;
+  line-height: 50px; }
+
+#TermsConditions ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0; }
+  #TermsConditions ol > li {
+    display: table;
+    counter-increment: item;
+    margin-bottom: 0.6em;
+    color: #ffc600;
+    font-size: 24px;
+    margin-top: 20px;
+    line-height: 2em;
+    list-style: none; }
+    #TermsConditions ol > li:before {
+      /*content: counters(item, ".") ". ";*/
+      display: table-cell;
+      padding-right: 0.6em; }
+    #TermsConditions ol > li > ol > li {
+      margin: 0;
+      line-height: 1.6em;
+      color: #fff;
+      padding-left: 1.5em; }
+      #TermsConditions ol > li > ol > li:before {
+        content: counters(item,".") " "; }
+      #TermsConditions ol > li > ol > li > ol > li {
+        margin: 0;
+        color: #fff;
+        line-height: 1.4em;
+        padding-left: 0; }
+
+#Transfer p {
+  margin: 1em auto;
+  color: #ffffff;
+  width: 80%;
+  font-size: 22px;
+  line-height: 1.5em; }
+#Transfer label {
+  position: absolute;
+  left: 10%;
+  width: 220px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  color: #4a2405;
+  overflow-x: scroll;
+  overflow-y: hidden; }
+#Transfer div.inputgroup,
+#Transfer input {
+  display: block;
+  width: 385px;
+  padding: 0 0 0 29%;
+  height: 81px;
+  margin: 0 auto 3%;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  font-size: 32px;
+  line-height: 80px; }
+  #Transfer div.inputgroup::-webkit-input-placeholder,
+  #Transfer input::-webkit-input-placeholder {
+    padding-top: 10px;
+    vertical-align: middle; }
+  #Transfer div.inputgroup.amount_acc,
+  #Transfer input.amount_acc {
+    background: url(/images/m/form_bg01.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+  #Transfer div.inputgroup.plat,
+  #Transfer input.plat {
+    padding: 0;
+    width: 608px;
+    background: url(/images/m/Amount_transferred-A02.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+    #Transfer div.inputgroup.plat select.name,
+    #Transfer input.plat select.name {
+      background: #fff;
+      background: transparent;
+      padding: 0;
+      margin: 2px 2px 2px 0px;
+      width: 33%;
+      display: block;
+      height: 95%;
+      float: left;
+      border: none;
+      outline: 0;
+      font-size: 30px;
+      line-height: 60px; }
+    #Transfer div.inputgroup.plat .amount,
+    #Transfer input.plat .amount {
+      padding: 0;
+      margin: 1%;
+      width: 63%;
+      height: 95%;
+      background: transparent;
+      float: right; }
+  #Transfer div.inputgroup.wait_widthdrawl,
+  #Transfer input.wait_widthdrawl {
+    width: 600px;
+    padding: 0; }
+    #Transfer div.inputgroup.wait_widthdrawl input,
+    #Transfer input.wait_widthdrawl input {
+      background: url(/images/m/form_bg01.jpg) 0 0 no-repeat;
+      background-size: 100%;
+      padding: 0;
+      padding-left: 35%;
+      height: 100%;
+      margin: 0;
+      float: left; }
+    #Transfer div.inputgroup.wait_widthdrawl button,
+    #Transfer input.wait_widthdrawl button {
+      width: 22%;
+      border-radius: 0;
+      position: absolute;
+      right: 11%;
+      font-size: 30px; }
+  #Transfer div.inputgroup.fileinput,
+  #Transfer input.fileinput {
+    background: url(/images/m/Bank_deposits-A08jpg.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+  #Transfer div.inputgroup#sys_file,
+  #Transfer input#sys_file {
+    display: none; }
+#Transfer select {
+  -webkit-appearance: listbox;
+  display: block;
+  width: 610px;
+  height: 81px;
+  padding: 0 0 0 215px;
+  margin: 0 auto 3% auto;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  text-align: center;
+  text-align-last: center;
+  font-size: 32px;
+  line-height: 50px; }
+  #Transfer select.tran_form {
+    background: url(/images/m/form_bg01.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+  #Transfer select.tran_to {
+    background: url(/images/m/form_bg01.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+#Transfer button {
+  display: block;
+  width: 610px;
+  height: 80px;
+  margin: 0 auto 2%;
+  border-radius: 40px;
+  border: none; }
+  #Transfer button.tran2acc {
+    height: auto; }
+  #Transfer button.tran2plt {
+    background: url(/images/m/Platform_transfer-A05jpg.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+  #Transfer button.sys_signupform_submit {
+    background-size: 100%; }
+  #Transfer button.sys_deposit_clear {
+    background-size: 100%; }
+  #Transfer button.return {
+    background-size: 100%; }
+
+#Deposit {
+  /* 線上支付列表 */ }
+  #Deposit #payform label,
+  #Deposit #payment_bank label,
+  #Deposit #payment_wechatpay label {
+    border: 0; }
+  #Deposit #payform input,
+  #Deposit #payment_bank input,
+  #Deposit #payment_wechatpay input {
+    display: block;
+    width: 57%;
+    height: 80px;
+    margin: 0 auto 3%;
+    padding: 0 0 0 3px;
+    border: 0;
+    border-radius: 0;
+    outline: 0; }
+    #Deposit #payform input::-webkit-input-placeholder,
+    #Deposit #payment_bank input::-webkit-input-placeholder,
+    #Deposit #payment_wechatpay input::-webkit-input-placeholder {
+      padding-top: 10px;
+      vertical-align: middle; }
+    #Deposit #payform input select,
+    #Deposit #payment_bank input select,
+    #Deposit #payment_wechatpay input select {
+      background: #fff;
+      border-radius: 0;
+      width: 98%;
+      height: 90%;
+      margin: 0 1%;
+      border: 0;
+      font-size: 32px;
+      line-height: 50px; }
+  #Deposit #payform div.group select,
+  #Deposit #payment_bank div.group select,
+  #Deposit #payment_wechatpay div.group select {
+    height: 80px;
+    background: #ffffff;
+    border: 0;
+    width: 59%;
+    border-radius: 0;
+    font-size: 32px;
+    line-height: 50px; }
+  #Deposit #payform div.group .copy,
+  #Deposit #payment_bank div.group .copy,
+  #Deposit #payment_wechatpay div.group .copy {
+    position: absolute;
+    height: 84px;
+    width: 100px;
+    right: 0;
+    top: 0;
+    font-weight: 600;
+    text-align: center;
+    font-size: 32px;
+    line-height: 84px;
+    background: #784602;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #784602 0%, #debb20 25%, #f8f486 45%, #f8f486 57%, #debb20 75%, #784602 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #784602 0%, #debb20 25%, #f8f486 45%, #f8f486 57%, #debb20 75%, #784602 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #784602 0%, #debb20 25%, #f8f486 45%, #f8f486 57%, #debb20 75%, #784602 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#784602', endColorstr='#784602',GradientType=0 );
+    /* IE6-9 */ }
+  #Deposit .linkbox {
+    width: 90%;
+    margin: 1% 5%;
+    overflow: hidden; }
+    #Deposit .linkbox div.item {
+      cursor: pointer;
+      float: left;
+      width: 43%;
+      height: 0;
+      padding-bottom: 33%;
+      margin: 3.5%;
+      background: url(/images/m/Home_D01-bg.jpg) no-repeat;
+      background-size: 100% 100%;
+      text-align: center;
+      /*
+      // 線上支付
+      &.deposit01 {
+          //background: url("/images/m/user_deposit_icon_01.jpg") 0 0 no-repeat;
+          background-size: 100%;
+      }
+      // 支付寶
+      &.deposit03 {
+          background: url("/images/m/user_deposit_icon_03_pic.jpg") 0 0 no-repeat;
+          background-size: 100%;
+      }
+      // 銀行
+      &.deposit05{
+          background: url("/images/m/user_deposit_icon_05_pic.jpg") 0 0 no-repeat;
+          background-size: 100%;
+      }
+      // 銀行入款
+      &.deposit04 {
+          //background: url("/images/m/user_deposit_icon_04.jpg") 0 0 no-repeat;
+          background-size: 100%;
+      }
+      //  QQ
+      &.deposit06 {
+          background: url("/images/m/user_deposit_icon_06_pic.jpg") 0 0 no-repeat;
+          background-size: 100%;
+      }
+      */ }
+      #Deposit .linkbox div.item#WECHATPAY {
+        background: url("/images/m/user_deposit_icon_02_pic.jpg") 54% 80% no-repeat, url("/images/m/Home_D01-bg.jpg") 0 0 no-repeat;
+        background-size: 90%, 100%; }
+      #Deposit .linkbox div.item#ALIPAY {
+        background: url("/images/m/user_deposit_icon_03_pic.jpg") 54% 80% no-repeat, url("/images/m/Home_D01-bg.jpg") 0 0 no-repeat;
+        background-size: 90%, 100%; }
+      #Deposit .linkbox div.item#BANK {
+        background: url("/images/m/user_deposit_icon_05_pic.jpg") 54% 80% no-repeat, url("/images/m/Home_D01-bg.jpg") 0 0 no-repeat;
+        background-size: 90%, 100%; }
+      #Deposit .linkbox div.item#QQPAY {
+        background: url("/images/m/user_deposit_icon_06_pic.jpg") 54% 80% no-repeat, url("/images/m/Home_D01-bg.jpg") 0 0 no-repeat;
+        background-size: 90%, 100%; }
+      #Deposit .linkbox div.item#ATM {
+        background: url("/images/m/user_deposit_icon_07_pic.jpg") 54% 80% no-repeat, url("/images/m/Home_D01-bg.jpg") 0 0 no-repeat;
+        background-size: 90%, 100%; }
+      #Deposit .linkbox div.item#H5 {
+        background: url("/images/m/user_deposit_icon_08.png") 54% 80% no-repeat, url("/images/m/Home_D01-bg.jpg") 0 0 no-repeat;
+        background-size: 90%, 100%; }
+      #Deposit .linkbox div.item a {
+        text-decoration: none; }
+        #Deposit .linkbox div.item a .item_title {
+          color: #6c4911;
+          background: url(/images/m/Home_top.jpg) no-repeat;
+          background-size: 100% 100%;
+          font-size: 32px; }
+        #Deposit .linkbox div.item a img {
+          width: 90%;
+          margin-top: 4%; }
+  #Deposit p {
+    margin: 1em auto;
+    color: #ffffff;
+    width: 80%;
+    font-size: 22px;
+    line-height: 1.5em; }
+  #Deposit .deposit_label {
+    position: absolute;
+    left: 10%;
+    width: 220px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    color: #4a2405;
+    z-index: 1; }
+  #Deposit div.inputgroup,
+  #Deposit input {
+    display: block;
+    border-radius: 0;
+    outline: 0;
+    height: 80px;
+    font-size: 32px;
+    line-height: 80px; }
+    #Deposit div.inputgroup::-webkit-input-placeholder,
+    #Deposit input::-webkit-input-placeholder {
+      padding-top: 10px;
+      vertical-align: middle; }
+    #Deposit div.inputgroup.sys_signup_account,
+    #Deposit input.sys_signup_account {
+      background: url(/images/m/Online_Payment-A01jpg.jpg) 0 0 no-repeat;
+      background-size: 100%; }
+    #Deposit div.inputgroup.sys_pay_amount,
+    #Deposit input.sys_pay_amount {
+      background: url(/images/m/Online_Payment-A02jpg.jpg) 0 0 no-repeat;
+      background-size: 100%; }
+    #Deposit div.inputgroup.sys_bankname,
+    #Deposit input.sys_bankname {
+      background: url(/images/m/Online_Payment-A03jpg.jpg) 0 0 no-repeat;
+      background-size: 100%; }
+    #Deposit div.inputgroup.sys_deposit_wc_date,
+    #Deposit input.sys_deposit_wc_date {
+      background: url(/images/m/form_bg01.jpg) 0 0 no-repeat;
+      background-size: 100%; }
+    #Deposit div.inputgroup.sys_deposit_bank_name::after, #Deposit div.inputgroup.sys_deposit_bank_accname::after, #Deposit div.inputgroup.sys_deposit_bank_branchName::after, #Deposit div.inputgroup.sys_deposit_bank_bankAcc::after,
+    #Deposit input.sys_deposit_bank_name::after,
+    #Deposit input.sys_deposit_bank_accname::after,
+    #Deposit input.sys_deposit_bank_branchName::after,
+    #Deposit input.sys_deposit_bank_bankAcc::after {
+      content: "复制";
+      display: block;
+      color: #4a2405;
+      background: transparent;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 2px 15px;
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      background: -moz-linear-gradient(top, #c79316 0%, #f1eb4d 50%, #f1eb4d 51%, #c79316 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #c79316 0%, #f1eb4d 50%, #f1eb4d 51%, #c79316 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #c79316 0%, #f1eb4d 50%, #f1eb4d 51%, #c79316 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+    #Deposit div.inputgroup#sys_file,
+    #Deposit input#sys_file {
+      width: 1px;
+      height: 1px;
+      margin: 0;
+      padding: 0;
+      z-index: -1; }
+    #Deposit div.inputgroup select,
+    #Deposit input select {
+      background: #fff;
+      border-radius: 0;
+      width: 98%;
+      height: 90%;
+      margin: 0 1%;
+      border: 0;
+      font-size: 32px;
+      line-height: 50px; }
+  #Deposit button {
+    display: block;
+    width: 610px;
+    height: 80px;
+    margin: 0 auto 2%;
+    border-radius: 40px;
+    border: none; }
+
+#MobileCasino ul.list2 {
+  display: inline-block;
+  width: 42%;
+  padding-left: 7%; }
+#MobileCasino p.center {
+  text-align: center; }
+#MobileCasino img.download {
+  width: 384px; }
+
+img#sys_preview {
+  max-width: 615px;
+  margin: 0 auto;
+  display: block; }
+
+#Withdrawal p {
+  color: #ffffff;
+  width: 80%;
+  margin: 0 auto 5% auto;
+  font-size: 32px;
+  line-height: 40px; }
+  #Withdrawal p span {
+    float: right;
+    width: 90%; }
+    #Withdrawal p span a {
+      color: #0e8ee5; }
+      #Withdrawal p span a:link, #Withdrawal p span a:active, #Withdrawal p span a:focus {
+        color: #0e8ee5;
+        text-decoration: none; }
+      #Withdrawal p span a:hover {
+        color: #0e8ee5;
+        text-decoration: none; }
+      #Withdrawal p span a:visited, #Withdrawal p span a.visited {
+        color: #0e8ee5; }
+#Withdrawal .table2 {
+  margin: 3% auto;
+  padding: 18% 0 0 22%;
+  display: block;
+  width: 438px;
+  height: 340px;
+  background: url(/images/m/my_account-B01jpg.jpg) 0 0 no-repeat;
+  background-size: 100%; }
+  #Withdrawal .table2 .col {
+    float: left;
+    color: #808080;
+    text-align: center;
+    width: 218px;
+    height: 84px;
+    overflow: hidden;
+    font-size: 20px;
+    line-height: 84px; }
+    #Withdrawal .table2 .col.time {
+      line-height: 36px;
+      margin: 4px 0;
+      height: 76px; }
+    #Withdrawal .table2 .col.last {
+      width: 438px; }
+#Withdrawal table {
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  color: #4b2705;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center; }
+  #Withdrawal table tr:nth-child(1) {
+    background: #6a3c17;
+    color: #fff;
+    letter-spacing: 3px; }
+  #Withdrawal table tr:nth-child(2) td:nth-child(2), #Withdrawal table tr:nth-child(2) td:nth-child(3) {
+    background: #c59b1d; }
+  #Withdrawal table tr {
+    background: #c59b1d; }
+    #Withdrawal table tr td:nth-child(2), #Withdrawal table tr td:nth-child(3) {
+      background: #fff; }
+  #Withdrawal table td {
+    border: solid 1px #6a3c17; }
+#Withdrawal input[type=checkbox] {
+  width: 0;
+  height: 3px;
+  margin: 0;
+  padding: 0;
+  float: left;
+  border: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none; }
+#Withdrawal input[type=checkbox] + label.squaredFour, #Withdrawal input[type=checkbox] + label + label.squaredFour {
+  width: 7%;
+  height: 0;
+  padding-bottom: 6%;
+  display: inline-block;
+  background: url(/images/m/Join_Membership-A07.png) 0 0 no-repeat;
+  background-size: 100%; }
+#Withdrawal input[type=checkbox]:checked + label.squaredFour, #Withdrawal input[type=checkbox]:checked + label + label.squaredFour {
+  width: 7%;
+  height: 0;
+  padding-bottom: 6%;
+  display: inline-block;
+  background: url(/images/m/Join_Membership-A06.png) 0 0 no-repeat;
+  background-size: 100%; }
+#Withdrawal input.wc_name, #Withdrawal input.sys_deposit_wc_name {
+  background: url(/images/m/WeChat_payment-A02jpg.jpg) 0 0 no-repeat;
+  background-size: 100%; }
+#Withdrawal input.wc_account, #Withdrawal input.sys_deposit_wc_account {
+  background: url(/images/m/WeChat_payment-A03jpg.jpg) 0 0 no-repeat;
+  background-size: 100%; }
+#Withdrawal input.sys_deposit_al_amount, #Withdrawal input.sys_deposit_wc_amount {
+  background: url(/images/m/WeChat_payment-A04jpg.jpg) 0 0 no-repeat;
+  background-size: 100%; }
+#Withdrawal input.sys_deposit_wc_date {
+  background: url(/images/m/WeChat_payment-A06jpg.jpg) 0 0 no-repeat;
+  background-size: 100%; }
+#Withdrawal input.al_account {
+  background: url(/images/m/Alipay-A01jpg.jpg) 0 0 no-repeat;
+  background-size: 100%; }
+#Withdrawal input.al_name, #Withdrawal input.sys_deposit_al_name {
+  background: url(/images/m/Alipay-A02jpg.jpg) 0 0 no-repeat;
+  background-size: 100%; }
+#Withdrawal input.sys_deposit_bank_amount {
+  background: url(/images/m/Bank_deposits-A06jpg.jpg) 0 0 no-repeat;
+  background-size: 100%; }
+#Withdrawal input#sys_file {
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  z-index: -1; }
+#Withdrawal div.selectbox {
+  display: block;
+  width: 51%;
+  padding-left: 27%;
+  height: 100%;
+  margin: 0 auto 2%;
+  border: 0;
+  outline: 0;
+  background: url(/images/m/WeChat_payment-A05jpg.jpg) 0 0 no-repeat;
+  background-size: 100%; }
+  #Withdrawal div.selectbox.bank {
+    background: url(/images/m/Bank_deposits-A01jpg.png) 0 0 no-repeat;
+    background-size: 100%; }
+  #Withdrawal div.selectbox select {
+    border-radius: 0;
+    width: calc( 100% - 4px);
+    height: calc( 100% - 4px);
+    margin: 2px;
+    border: 0;
+    font-size: 32px;
+    line-height: 50px; }
+#Withdrawal button {
+  display: block;
+  width: 610px;
+  height: 80px;
+  margin: 0 auto 2%;
+  border-radius: 40px;
+  border: none; }
+  #Withdrawal button.sys_signupform_submit {
+    background-size: 100%; }
+  #Withdrawal button.sys_withdrawal_clear, #Withdrawal button.sys_deposit_clear {
+    background-size: 100%; }
+  #Withdrawal button.sys_withdrawal_submit {
+    background-size: 100%; }
+  #Withdrawal button.return {
+    background-size: 100%; }
+
+#BankSettings input::-webkit-input-placeholder {
+  color: #775b45; }
+#BankSettings input::-moz-placeholder {
+  color: #775b45; }
+#BankSettings div.linebox {
+  color: #775b45;
+  background: #fff;
+  border: solid 3px #c49b1b;
+  font-weight: bold;
+  margin: 5%;
+  padding: 2%;
+  font-size: 22px;
+  line-height: 32px; }
+  #BankSettings div.linebox p {
+    margin: 0 auto;
+    width: 96%;
+    color: #775b45; }
+    #BankSettings div.linebox p span {
+      color: #775b45; }
+#BankSettings p,
+#BankSettings ol {
+  color: #ffffff;
+  width: 80%;
+  margin: 0 auto 5% auto;
+  font-size: 32px;
+  line-height: 40px; }
+#BankSettings table.detail {
+  background: url(/images/m/my_account-B01jpg.jpg) 0 0 no-repeat;
+  background-size: 100%;
+  width: 600px;
+  height: 476px;
+  margin: 0 auto; }
+  #BankSettings table.detail th {
+    width: 154px;
+    height: 73px;
+    text-align: center; }
+  #BankSettings table.detail td {
+    width: 215px;
+    height: 73px;
+    margin-left: 8px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 28px; }
+#BankSettings div.selectbox {
+  -webkit-appearance: listbox;
+  display: block;
+  width: 51%;
+  padding-left: 27%;
+  height: 81px;
+  margin: 0 auto 2% auto;
+  border: 0;
+  outline: 0; }
+  #BankSettings div.selectbox select {
+    border-radius: 0;
+    width: 99%;
+    height: 77px;
+    margin: 2px;
+    border: 0;
+    font-size: 32px;
+    line-height: 50px; }
+#BankSettings select {
+  -webkit-appearance: listbox;
+  background: #fff;
+  display: block;
+  height: 80px;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  font-size: 32px;
+  line-height: 80px; }
+#BankSettings label {
+  border: 0; }
+#BankSettings div.inputgroup,
+#BankSettings input {
+  border: 0;
+  height: 80px;
+  font-size: 32px;
+  line-height: 80px; }
+  #BankSettings div.inputgroup::-webkit-input-placeholder,
+  #BankSettings input::-webkit-input-placeholder {
+    padding-top: 10px;
+    vertical-align: middle; }
+  #BankSettings div.inputgroup.tel,
+  #BankSettings input.tel {
+    width: 60%;
+    padding: 0;
+    background: transparent; }
+    #BankSettings div.inputgroup.tel .sys_phoneCode,
+    #BankSettings input.tel .sys_phoneCode {
+      float: left;
+      width: 20%;
+      padding: 0;
+      margin: 0;
+      height: 80px;
+      line-height: 80px; }
+    #BankSettings div.inputgroup.tel .sys_phone,
+    #BankSettings input.tel .sys_phone {
+      float: left;
+      width: 68%;
+      padding: 0;
+      margin: 0 0 0 7%;
+      height: 80px;
+      line-height: 80px; }
+  #BankSettings div.inputgroup.im,
+  #BankSettings input.im {
+    width: 60%;
+    padding: 0;
+    background: transparent; }
+    #BankSettings div.inputgroup.im .sys_profile_imType,
+    #BankSettings input.im .sys_profile_imType {
+      float: left;
+      width: 30%;
+      padding: 0;
+      margin: 0;
+      height: 80px;
+      line-height: 80px; }
+    #BankSettings div.inputgroup.im .sys_profile_imNo,
+    #BankSettings input.im .sys_profile_imNo {
+      float: left;
+      width: 58%;
+      padding: 0;
+      margin: 0 0 0 7.5%;
+      height: 80px;
+      line-height: 80px; }
+#BankSettings button {
+  display: block;
+  width: 610px;
+  height: 80px;
+  margin: 0 auto 2%;
+  border-radius: 40px;
+  border: none; }
+  #BankSettings button.detail {
+    width: 32%;
+    width: calc( 32% - 4px);
+    background: url(/images/m/Withdrawal-A07.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+  #BankSettings button.sys_submit {
+    background-size: 100%; }
+  #BankSettings button.sys_withdrawal_submit {
+    background: url(/images/m/Withdrawal-A06jpg.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+
+#MyInfo p {
+  color: #ffffff;
+  width: 80%;
+  margin: 0 auto 38px auto;
+  font-size: 32px;
+  line-height: 40px; }
+  #MyInfo p span {
+    float: right;
+    width: 90%; }
+    #MyInfo p span a {
+      color: #0e8ee5; }
+      #MyInfo p span a:link, #MyInfo p span a:active, #MyInfo p span a:focus {
+        color: #0e8ee5;
+        text-decoration: none; }
+      #MyInfo p span a:hover {
+        color: #0e8ee5;
+        text-decoration: none; }
+      #MyInfo p span a:visited, #MyInfo p span a.visited {
+        color: #0e8ee5; }
+#MyInfo label {
+  position: absolute;
+  left: 10%;
+  width: 220px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  color: #4a2405; }
+#MyInfo button {
+  display: block;
+  width: 610px;
+  height: 80px;
+  margin: 0 auto 2%;
+  border-radius: 40px;
+  border: none; }
+  #MyInfo button.detail {
+    width: calc( 32% - 4px);
+    background: url(/images/m/Withdrawal-A07.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+  #MyInfo button.sys_personalprofile_submit {
+    background-size: 100%; }
+  #MyInfo button.clear, #MyInfo button.sys_withdrawal_clear, #MyInfo button.sys_deposit_clear {
+    background-size: 100%; }
+  #MyInfo button.sys_withdrawal_submit {
+    background: url(/images/m/Withdrawal-A06jpg.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+  #MyInfo button.return {
+    background: url(/images/m/Amount_transferred-A06.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+#MyInfo .group {
+  position: relative;
+  width: 80%;
+  margin: 0 10% 5% 10%;
+  height: 80px;
+  padding: 0; }
+  #MyInfo .group label {
+    float: left;
+    width: 40%;
+    height: 80px;
+    position: relative;
+    left: 0;
+    white-space: nowrap;
+    overflow-x: scroll;
+    margin: 0;
+    padding: 0;
+    border-right-width: 1px;
+    border: solid 2px #cfad44;
+    border-right-width: 1px;
+    background: #c59c1b;
+    color: #4a2405;
+    text-align: center;
+    font-size: 30px;
+    line-height: 80px; }
+  #MyInfo .group label + input, #MyInfo .group div.input, #MyInfo .group div {
+    float: left;
+    width: 56%;
+    margin: 0;
+    padding: 0;
+    padding-left: 1%;
+    border: solid 2px #cfad44;
+    border-left-width: 1px;
+    background: #ffffff;
+    color: #222222;
+    text-align: left;
+    font-size: 30px;
+    line-height: 80px; }
+  #MyInfo .group input[type='date'] {
+    -webkit-appearance: none; }
+#MyInfo div.inputgroup,
+#MyInfo input {
+  display: block;
+  width: 385px;
+  padding: 0 0 0 29%;
+  height: 81px;
+  margin: 0 auto 3%;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  font-size: 32px;
+  line-height: 80px; }
+  #MyInfo div.inputgroup::-webkit-input-placeholder,
+  #MyInfo input::-webkit-input-placeholder {
+    padding-top: 10px;
+    vertical-align: middle; }
+  #MyInfo div.inputgroup.sys_profile_nick,
+  #MyInfo input.sys_profile_nick {
+    background: url(/images/m/form_bg01.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+  #MyInfo div.inputgroup.sys_profile_birth,
+  #MyInfo input.sys_profile_birth {
+    letter-spacing: 8px;
+    background: url(/images/m/form_bg01.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+  #MyInfo div.inputgroup.sys_profile_email,
+  #MyInfo input.sys_profile_email {
+    background: url(/images/m/form_bg01.jpg) 0 0 no-repeat;
+    background-size: 100%; }
+  #MyInfo div.inputgroup.sys_profile_tel,
+  #MyInfo input.sys_profile_tel {
+    background: url(/images/m/Personal_Information-A04.png) 0 0 no-repeat;
+    background-size: 100%; }
+  #MyInfo div.inputgroup.tel,
+  #MyInfo input.tel {
+    background: url(/images/m/Personal_Information-A04.png) 0 0 no-repeat;
+    background-size: 100%; }
+  #MyInfo div.inputgroup.im,
+  #MyInfo input.im {
+    background: none;
+    padding: 0;
+    display: inline-block;
+    margin: 0;
+    width: 58%; }
+    #MyInfo div.inputgroup.im .sys_profile_imType,
+    #MyInfo input.im .sys_profile_imType {
+      float: left;
+      width: 27%;
+      padding: 0;
+      margin: 0;
+      border: solid 2px #cfad44; }
+    #MyInfo div.inputgroup.im .sys_profile_imNo,
+    #MyInfo input.im .sys_profile_imNo {
+      float: right;
+      width: 64%;
+      padding: 0;
+      margin: 0% 0 0% 6%;
+      border: solid 2px #cfad44; }
+
+#Contactus form {
+  text-align: center; }
+  #Contactus form input {
+    display: block;
+    width: 384px;
+    padding-left: 215px;
+    height: 80px;
+    margin: 0 auto 15px auto;
+    border: 0;
+    outline: 0;
+    font-size: 32px;
+    line-height: 50px; }
+    #Contactus form input.sys_cus_first_name {
+      background: url(/images/m/ContactUs_A01.jpg) center center no-repeat;
+      background-size: 100%; }
+    #Contactus form input.sys_cus_last_name {
+      background: url(/images/m/ContactUs_A02.jpg) center center no-repeat;
+      background-size: 100%; }
+    #Contactus form input.sys_cus_mail {
+      background: url(/images/m/ContactUs_A03.jpg) center center no-repeat;
+      background-size: 100%; }
+    #Contactus form input.sys_cus_phone {
+      background: url(/images/m/ContactUs_A04.jpg) center center no-repeat;
+      background-size: 100%; }
+  #Contactus form textarea.sys_cus_question {
+    display: block;
+    width: 384px;
+    padding-left: 215px;
+    height: 346px;
+    margin: 0 auto 15px auto;
+    border: 0;
+    outline: 0;
+    background: url(/images/m/ContactUs_A05.png) center center no-repeat;
+    background-size: 100%;
+    font-size: 40px;
+    line-height: 80px; }
+  #Contactus form div.selectbox {
+    display: block;
+    width: 392px;
+    padding-left: 207px;
+    height: 80px;
+    margin: 0 auto 15px auto;
+    border: 0;
+    outline: 0;
+    background: url(/images/m/ContactUs_A06.jpg) center center no-repeat;
+    background-size: 100%; }
+    #Contactus form div.selectbox select {
+      border-radius: 0;
+      width: calc( 100% - 4px);
+      height: calc( 100% - 4px);
+      margin: 2px;
+      border: 0;
+      font-size: 32px;
+      line-height: 50px; }
+  #Contactus form button {
+    width: 180px;
+    height: 80px;
+    margin: 5px; }
+    #Contactus form button.clear {
+      background: url(/images/m/ContactUs_B02.jpg) center center no-repeat;
+      background-size: 100%; }
+    #Contactus form button.submit {
+      background: url(/images/m/ContactUs_B01.jpg) center center no-repeat;
+      background-size: 100%; }
+
+#Paymentdone p {
+  color: #ffffff;
+  width: 80%;
+  margin: 0 auto 2% auto;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center; }
+#Paymentdone .red_amount {
+  color: #FF0000;
+  margin-left: 10px; }
+#Paymentdone button {
+  display: block;
+  width: 610px;
+  height: 80px;
+  margin: 0 auto 15px;
+  border: none; }
+#Paymentdone button.return {
+  background: url(/images/m/transferred-check.jpg) 0 0 no-repeat;
+  background-size: 100%;
+  color: #121212;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center; }
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 22%; }
+  footer ul.contact {
+    background: #000;
+    border: solid 1px #7e7e7e;
+    width: 100%;
+    list-style: none;
+    height: 90px;
+    padding: 0;
+    margin: 0;
+    display: block; }
+    footer ul.contact li {
+      display: inline-block;
+      position: relative;
+      height: 100%;
+      width: 23%;
+      padding: 0; }
+      footer ul.contact li a,
+      footer ul.contact li a:link,
+      footer ul.contact li a:visited {
+        text-align: center;
+        height: inherit;
+        margin: 0;
+        display: block;
+        text-decoration: none; }
+        footer ul.contact li a:before,
+        footer ul.contact li a:link:before,
+        footer ul.contact li a:visited:before {
+          content: '';
+          width: 0;
+          height: 100%;
+          display: inline-block;
+          position: relative;
+          vertical-align: middle;
+          margin: 0 0 0 -4%; }
+        footer ul.contact li a:after,
+        footer ul.contact li a:link:after,
+        footer ul.contact li a:visited:after {
+          content: '';
+          position: absolute;
+          top: 20px;
+          left: 10px;
+          width: 41px;
+          height: 41px; }
+        footer ul.contact li a.support:after,
+        footer ul.contact li a:link.support:after,
+        footer ul.contact li a:visited.support:after {
+          background-image: url("/images/m/icon_01.png"); }
+        footer ul.contact li a.hotcall:after,
+        footer ul.contact li a:link.hotcall:after,
+        footer ul.contact li a:visited.hotcall:after {
+          background-image: url("/images/m/icon_03.png"); }
+        footer ul.contact li a.mail:after,
+        footer ul.contact li a:link.mail:after,
+        footer ul.contact li a:visited.mail:after {
+          background-image: url("/images/m/icon_02.png"); }
+        footer ul.contact li a.servicetime:after,
+        footer ul.contact li a:link.servicetime:after,
+        footer ul.contact li a:visited.servicetime:after {
+          background-image: url("/images/m/icon_04.png"); }
+        footer ul.contact li a h5,
+        footer ul.contact li a:link h5,
+        footer ul.contact li a:visited h5 {
+          color: #F2E581;
+          font-size: 22px;
+          line-height: 1em;
+          padding: 0 0 0 50px;
+          margin: 0;
+          display: inline-block;
+          vertical-align: middle; }
+        footer ul.contact li a img,
+        footer ul.contact li a:link img,
+        footer ul.contact li a:visited img {
+          width: 100%;
+          height: auto; }
+  footer p#link {
+    text-align: center;
+    color: #331900;
+    background: #c99317;
+    background: -moz-linear-gradient(top, #c99317 6%, #d1b627 22%, #eae446 50%, #d1b627 78%, #c99317 94%);
+    background: -webkit-linear-gradient(top, #c99317 6%, #d1b627 22%, #eae446 50%, #d1b627 78%, #c99317 94%);
+    background: linear-gradient(to bottom, #c99317 6%, #d1b627 22%, #eae446 50%, #d1b627 78%, #c99317 94%);
+    box-shadow: 0 0 5px #111111;
+    width: 100%;
+    margin: 0;
+    padding: 16px 0;
+    font-size: 32px;
+    line-height: 48px; }
+    footer p#link a,
+    footer p#link a:link,
+    footer p#link a:visited {
+      font-weight: bold;
+      text-decoration: none;
+      color: #331900;
+      padding: 3px 0;
+      white-space: nowrap;
+      font-size: 22px;
+      line-height: 48px; }
+
+@keyframes gocircle {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+.msg.loading {
+  background: url(/images/icon_loading.png) center center no-repeat;
+  -webkit-animation: gocircle 1s steps(12) infinite;
+  animation: gocircle 1s steps(12) infinite; }
+
+html {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  overflow-y: auto;
+  background: #121212 url(/images/m/bg.png) 0 0 repeat;
+  background-size: 100%; }
+
+body {
+  background: #121212 url(/images/m/bg.png) 0 0 repeat;
+  background-size: 100%;
+  font-family: Arial, "Microsoft YaHei", "Microsoft JhengHei", "Hiragino Sans GB", "Noto Sans SC", STHeiti, sans-serif;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  padding-top: 17%;
+  left: 0;
+  right: 0; }
+  body.openmenu .mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    background: rgba(0, 0, 0, 0.55); }
+  body.openmmenu .mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55); }
+  body.lock {
+    overflow-y: hidden;
+    z-index: 0; }
+    body.lock .mask {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      line-height: 1000px;
+      overflow-y: auto;
+      background: rgba(0, 0, 0, 0.75); }
+      body.lock .mask .xx {
+        display: block; }
+
+button.cancel {
+  width: 170px;
+  height: 80px;
+  margin: 5px 20px;
+  background: url(/images/m/cancel.jpg) 0 0 no-repeat;
+  background-size: 100%; }
+button.done {
+  width: 170px;
+  height: 80px;
+  margin: 5px 20px;
+  background: url(/images/m/determine.jpg) 0 0 no-repeat;
+  background-size: 100%; }
+button.default {
+  background: #F8EC8C;
+  background: -moz-linear-gradient(top, #dfe5d7 0%, #C5AB2D 0%, #F8EC8C 40%, #F8EC8C 60%, #C5AB2D 100%);
+  background: -webkit-linear-gradient(top, #dfe5d7 0%, #C5AB2D 0%, #F8EC8C 40%, #F8EC8C 60%, #C5AB2D 100%);
+  background: linear-gradient(to bottom, #dfe5d7 0%, #C5AB2D 0%, #F8EC8C 40%, #F8EC8C 60%, #C5AB2D 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfe5d7', endColorstr='#787878', GradientType=0);
+  border-radius: 40px;
+  font-size: 36px;
+  color: #212021;
+  box-shadow: 1px 0px 1px #8e8e8e;
+  font-weight: bold; }
+
+button.sure {
+  margin: 20px;
+  width: 600px;
+  height: 80px; }
+
+input,
+select,
+textarea {
+  outline: 0; }
+  input.error, input.validate-error, input.jq-validate-custom-class, input.my-error-class, input.sys-error-class, input.form_error_msg,
+  select.error,
+  select.validate-error,
+  select.jq-validate-custom-class,
+  select.my-error-class,
+  select.sys-error-class,
+  select.form_error_msg,
+  textarea.error,
+  textarea.validate-error,
+  textarea.jq-validate-custom-class,
+  textarea.my-error-class,
+  textarea.sys-error-class,
+  textarea.form_error_msg {
+    border: solid 2px #f00 !important; }
+    input.error#squaredFour, input.validate-error#squaredFour, input.jq-validate-custom-class#squaredFour, input.my-error-class#squaredFour, input.sys-error-class#squaredFour, input.form_error_msg#squaredFour,
+    select.error#squaredFour,
+    select.validate-error#squaredFour,
+    select.jq-validate-custom-class#squaredFour,
+    select.my-error-class#squaredFour,
+    select.sys-error-class#squaredFour,
+    select.form_error_msg#squaredFour,
+    textarea.error#squaredFour,
+    textarea.validate-error#squaredFour,
+    textarea.jq-validate-custom-class#squaredFour,
+    textarea.my-error-class#squaredFour,
+    textarea.sys-error-class#squaredFour,
+    textarea.form_error_msg#squaredFour {
+      border: none 0 !important; }
+      input.error#squaredFour + label, input.validate-error#squaredFour + label, input.jq-validate-custom-class#squaredFour + label, input.my-error-class#squaredFour + label, input.sys-error-class#squaredFour + label, input.form_error_msg#squaredFour + label,
+      select.error#squaredFour + label,
+      select.validate-error#squaredFour + label,
+      select.jq-validate-custom-class#squaredFour + label,
+      select.my-error-class#squaredFour + label,
+      select.sys-error-class#squaredFour + label,
+      select.form_error_msg#squaredFour + label,
+      textarea.error#squaredFour + label,
+      textarea.validate-error#squaredFour + label,
+      textarea.jq-validate-custom-class#squaredFour + label,
+      textarea.my-error-class#squaredFour + label,
+      textarea.sys-error-class#squaredFour + label,
+      textarea.form_error_msg#squaredFour + label {
+        border: solid 2px #f00 !important; }
+
+hr {
+  background: #bd8300;
+  width: 690px;
+  height: 1px;
+  margin: 0 auto 23px;
+  border: 0; }
+
+/*input comm*/
+div.input {
+  width: 50%;
+  margin: 0 10%;
+  padding: 0;
+  padding-left: 30%;
+  padding-bottom: 8%;
+  border: solid 2px #a96afe;
+  background: #2b193d;
+  background: -moz-linear-gradient(left, #2b193d 0%, #2b193d 35%, #a96afe 36%, #faf9fc 37%, #ffffff 100%);
+  background: -webkit-linear-gradient(left, #2b193d 0%, #2b193d 35%, #a96afe 36%, #faf9fc 37%, #ffffff 100%);
+  background: linear-gradient(to right, #2b193d 0%, #2b193d 35%, #a96afe 36%, #faf9fc 37%, #ffffff 100%);
+  font-size: 16px;
+  line-height: 8%;
+  color: #a96afe; }
+
+#gamemenu {
+  width: 96%;
+  margin: 1% 2%;
+  overflow: hidden; }
+  #gamemenu .gameitem {
+    float: left;
+    width: 46%;
+    min-height: 300px;
+    margin: 1% 2%;
+    position: relative;
+    background: url(/images/m/Home_D01-bg.jpg) no-repeat;
+    background-size: 100% 100%;
+    text-align: center; }
+    #gamemenu .gameitem.comingsoon:after {
+      content: ' ';
+      background: #c19e67 url(/images/m/coming_soon_01.png) bottom right no-repeat;
+      background-size: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0.8; }
+    #gamemenu .gameitem a {
+      text-decoration: none; }
+    #gamemenu .gameitem .gameitem_title {
+      color: #6c4911;
+      background: url(/images/m/Home_top.jpg) no-repeat;
+      background-size: 100% 100%;
+      font-size: 32px; }
+    #gamemenu .gameitem h5 {
+      color: #222;
+      margin: 0; }
+    #gamemenu .gameitem .gameitem_button {
+      color: #512e08;
+      background: url(/images/m/Home_button.jpg) no-repeat;
+      background-size: 100% 100%;
+      width: 60%;
+      margin: 5px 20%;
+      padding: 5px 0;
+      border-radius: 5px;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 3px; }
+    #gamemenu .gameitem img {
+      width: 90%;
+      height: 160px; }
+
+#banner .flex-control-nav {
+  bottom: 0px; }
+#banner .flex-direction-nav a {
+  z-index: 1; }
+
+/*input comm*/
+div.group {
+  position: relative;
+  width: 80%;
+  margin: 0 10% 5% 10%;
+  height: 80px;
+  padding: 0; }
+  div.group label {
+    float: left;
+    width: 40%;
+    height: 80px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    margin: 0;
+    padding: 0;
+    border-right-width: 1px;
+    border: solid 2px #cfad44;
+    border-right-width: 1px;
+    background: #c59c1b;
+    color: #4a2405;
+    font-weight: 800;
+    text-align: center;
+    font-size: 30px;
+    line-height: 80px; }
+  div.group label + input, div.group div.input, div.group div, div.group input[type=date] {
+    float: left;
+    width: 57%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    padding-left: 1%;
+    border: solid 2px #cfad44;
+    border-left-width: 1px;
+    border-radius: 0;
+    background: #ffffff;
+    color: #222222;
+    text-align: left;
+    font-size: 30px;
+    line-height: 80px; }
+    div.group label + input select, div.group div.input select, div.group div select, div.group input[type=date] select {
+      width: 100%; }
+  div.group select {
+    width: 58%;
+    height: 100%;
+    border-radius: 0;
+    background: #fff;
+    border: solid 2px #cfad44;
+    font-size: 30px;
+    line-height: 80px; }
+
+/*# sourceMappingURL=mStyle.css.map */

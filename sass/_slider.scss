@@ -1,0 +1,365 @@
+@import "variable";
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+  background: none;
+  color: #562e0a;
+}
+
+.nav-tabs{
+  li{
+    &:active{
+      a, a:link, a:hover, a:visited{
+        color: #562e0a;
+        &:focus{
+          color: #562e0a;
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+/*我的遊戲*/
+.slider_fav {
+  width:100%;
+  display: block;
+  height: 55px;
+  max-width: 1000px;
+  margin: 10px auto 0 auto;
+  @include bg_3;
+
+//nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+
+      div {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+          padding-bottom: 10px;
+          .nav {
+              margin: 10px 0 0 0;
+              height: 100%;
+              overflow: hidden;
+              width: 100%;
+              padding-bottom: 0px;
+              text-align: center;
+              border: 0;
+                li{
+                  width: 50%;
+                  border-radius: 10px;
+                  float: left;
+                  border: 1px solid #562e0a;
+                  @include bg_3;
+                  color: $nav_off;
+                  display: inline-block;
+                  a{
+                    font: bolder 18px/18px $fontA;
+                    padding: 0px;
+                    color: $nav_off;
+                    line-height: 35px;
+                    border: 0;
+                    background: none;
+                  }
+                  &:hover{
+                    border-top: 1px solid $nav_frame;
+                    border-left: 1px solid $nav_frame;
+                    border-right: 1px solid $nav_frame;
+                    background: $nav_on_background;
+                    border: 1px solid #562e0a;
+                    a{
+                      color: $nav_a;
+                      border: 0;
+                      background: 0;
+                    }
+
+                  }
+                }
+          }
+      }
+}
+
+/*会员中心*/
+.slider1 {
+  width:100%;
+  display: block;
+  height: 35px;
+  max-width: 1000px;
+  margin: 10px auto 0 auto;
+  @media(max-width: 990px){
+    height: 60px;
+  }
+  div {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding-bottom: 10px;
+      .nav {
+          height: 100%;
+          overflow: hidden;
+          width: 100%;
+          padding-bottom: 0px;
+          text-align: center;
+            .on{
+                border: 1px solid $nav_frame;
+                background: $nav_on_background;
+                a{
+                  color: $nav_a;
+                }
+              }
+              .off{
+                border: 1px solid $nav_off_border;
+                background: $nav_off_background;
+              }
+
+            li{
+              width: auto;
+              padding: 0 25px;
+              margin: 0px 0px 5px 5px;
+              border-radius: 24px;
+              float: left;
+              background: url('/images/background01.jpg') 0 0 repeat;
+              color: $nav_off;
+              display: inline-block;
+              a{
+                border-radius: 20px;
+                font: bolder 15px/0px $fontA;
+                padding: 0px;
+                color: $nav_off;
+                line-height: 25px;
+              }
+              &:hover{
+                border: 1px solid $nav_frame;
+                background: $nav_on_background;
+                a{
+                  color: $nav_a;
+                }
+              }
+            }
+      }
+  }
+}
+
+
+.promotion_top{
+  width: 85%;
+  float: right;
+  .on{
+    border: 1px solid $nav_frame;
+    background: $nav_on_background;
+    a{
+      color: $nav_a;
+    }
+  }
+  .off{
+    border: 1px solid $nav_off;
+  }
+  li{
+    width: auto;
+    margin: 0 30px 10px 0;
+    padding: 0 10px 0px 0;
+    text-align: center;
+    //height: 100%;
+    float: left;
+    background: #333333;
+    //color: $nav_off;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 125px;
+    overflow: hidden;
+    height: 35px;
+    a{
+      font: bolder 12px/12px $fontA;
+      padding: 0px;
+      color: $nav_off;
+      line-height: 35px;
+    }
+    &:hover{
+      border: 1px solid $nav_frame;
+
+      a{
+        color: $nav_a;
+      }
+
+    }
+  }
+}
+
+/*關於我們...開新分頁*/
+.slider2 {
+  width:100%;
+  display: block;
+  height: 37px;
+  max-width: 1000px;
+  margin: 10px auto 10px auto;
+
+      div {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+          padding-bottom: 10px;
+          .nav {
+              height: 100%;
+              overflow: hidden;
+              width: 100%;
+              padding-bottom: 0px;
+              text-align: center;
+              .on{
+                  border: 1px solid $nav_frame;
+                  background: $nav_on_background;
+                  a{
+                    color: $nav_a;
+                  }
+                }
+                .off{
+                  border: 1px solid $nav_off_border;
+                  background: $nav_off_background;
+                }
+                li{
+                  margin: 0 2%;
+                  width: auto;
+                  padding: 0 4%;
+                  float: left;
+                  background: #333333;
+                  color: $nav_off;
+                  display: inline-block;
+                  a{
+                    font: bolder 14px/14px $fontA;
+                    padding: 0px;
+                    color: $nav_off;
+                    line-height: 35px;
+                  }
+                  &:hover{
+                    background: $nav_on_background;
+                    border: 1px solid $nav_frame;
+                    a{
+                      color: $nav_a;
+                    }
+
+                  }
+                }
+
+
+          }
+      }
+}
+
+/*服务中心...開新分頁*/
+.slider_bg{
+  position: absolute;
+  height: 58px;
+  top: 112px;
+  width: 100%;
+  left: 0px;
+  background: $static_bg;
+}
+
+
+.slider3 {
+  width:100%;
+  display: block;
+  height: 37px;
+  max-width: 1000px;
+  margin: 10px auto 10px auto;
+
+      div {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+          padding-bottom: 10px;
+          .nav {
+              height: 100%;
+              overflow: hidden;
+              width: 100%;
+              padding-bottom: 0px;
+              text-align: center;
+                .on{
+                  border: 1px solid $nav_frame;
+                  background: $nav_on_background;
+                  a{
+                    color: $nav_a;
+                  }
+                }
+                .off{
+                  border: 1px solid $nav_off_border;
+                  background: $nav_off_background;
+                }
+                li{
+                  margin: 0 2%;
+                  width: 28%;
+                  float: left;
+                  display: inline-block;
+                  a{
+                    font: bolder 12px/12px $fontA;
+                    padding: 0px;
+                    color: $nav_off;
+                    line-height: 35px;
+                  }
+                  &:hover{
+                    background: $nav_on_background;
+                    border: 1px solid $nav_frame;
+
+                    a{
+                      color: $nav_a;
+                    }
+
+                  }
+                }
+
+
+          }
+      }
+}
+
+
+/*Tab分頁 滑動選單*/
+.slider {
+  max-height: 347px;
+  display: none;
+    @media (max-width: 1100px) {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        &:before {
+            width: 0;
+            height: 0;
+            content: '';
+            position: absolute;
+            top: 22px;
+            left: 3px;
+            border-style: solid;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent transparent transparent #333;
+            display: none;
+        }
+        &:after {
+            width: 0;
+            height: 0;
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: 3px;
+            border-style: solid;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #444;
+            animation: AnRight 1s infinite;
+            -moz-animation: AnRight 1s infinite;
+            -webkit-animation: AnRight 1s infinite;
+        }
+        div {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding-bottom: 10px;
+            .nav {
+                li > a {
+                    font: bolder 28px/30px $fontA;
+                    padding: 8px 40px;
+                }
+                height: 54px;
+                overflow: hidden;
+                width: 1000px;
+                padding-bottom: 0px;
+            }
+        }
+    }
+    @include bg_2;
+}

@@ -1,0 +1,231 @@
+@charset "utf-8";
+
+#lottery{
+  padding: 20px 0;
+}
+
+#lottery ul.game-list li {
+  width: 316px;
+  height: 162px;
+  margin: 0 16px 20px 0;
+  padding: 15px 0 0 165px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  background-repeat: no-repeat;
+  background-position: 30px center;
+  border: 1px solid #352d21;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  -webkit-transition: inherit;
+  transition: all .3s;
+  position: relative;
+  display: inline-block;
+  float: left;
+  &:hover {
+    border: 1px solid #ffd053;
+  }
+  span {
+    display: block;
+    width: 100px;
+    margin: 6px 0 0 25px;
+    padding: 2px 0;
+    color: #625645;
+    font-size: 13px;
+    border: 2px solid #625645;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+    &:first-child {
+      margin-top: 10px;
+    }
+    &:hover {
+      color: #ffd053;
+      border: 2px solid #ffd053;
+    }
+  }
+  &[game-box="01"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(/images/bjpk10.png);
+  }
+  &[game-box="02"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(/images/lhc.png);
+  }
+  &[game-box="03"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(/images/bjssc.png);
+  }
+  &[game-box="04"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(/images/cqssc.png);
+  }
+  &[game-box="05"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(/images/tjssc.png);
+  }
+  &[game-box="06"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(/images/xjssc.png);
+  }
+  &[game-box="07"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(/images/shssl.png);
+  }
+  &[game-box="08"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(/images/xyft.png);
+  }
+  &[game-box="09"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(/images/jstb.png);
+  }
+  &[game-box="10"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(/images/gxk3.png);
+  }
+  &[game-box="11"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(/images/ahk3.png);
+  }
+  &[game-box="12"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(../images/hbk3.png);
+  }
+  &[game-box="13"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(../images/jlk3.png);
+  }
+  &[game-box="14"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(../images/gd11x5.png);
+  }
+  &[game-box="15"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(../images/jx11x5.png);
+  }
+  &[game-box="16"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(../images/sh11x5.png);
+  }
+  &[game-box="17"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(../images/sd11x5.png);
+  }
+  &[game-box="18"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(/images/ah11x5.png);
+  }
+  &[game-box="19"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(../images/bj11x5.png);
+  }
+  &[game-box="20"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(../images/xy28.png);
+  }
+  &[game-box="21"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(../images/bj28.png);
+  }
+  &[game-box="22"] {
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url(../images/fc3d.png);
+  }
+
+
+}
+
+
+
+.lotts {
+  width: 648px;
+  height: 162px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(53, 45, 33);
+  position: absolute;
+  bottom: 54px;
+  right: 20px;
+}
+
+.price {
+  width: 300px;
+  margin-top: 25px;
+  float: left;
+  lable {
+    margin-top: 3px;
+    font-size: 45px;
+    color: #fffdaf;
+    display: block;
+    font-weight: 200;
+  }
+}
+
+.newsInfo {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  width: 320px;
+  height: 120px;
+  overflow: hidden;
+  .lBox {
+    float: left;
+    padding-right: 10px;
+  }
+  .tempWrap {
+    overflow: hidden;
+    position: relative;
+    height: 120px;
+  }
+  li {
+    line-height: 30px;
+    height: 30px;
+    font-size: 13px;
+    overflow: hidden;
+    zoom: 1;
+  }
+  span {
+    display: block;
+    margin: 0 20px 0 0;
+    color: #959595;
+    float: left;
+  }
+  .color01 {
+    width: 60px;
+    color: #ffc547;
+  }
+  span:nth-child(3) {
+    width: 80px;
+  }
+  .color02 {
+    color: #d33024;
+  }
+}

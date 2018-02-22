@@ -1,0 +1,93 @@
+@charset "utf-8";
+.promotion_box {
+  display: inline-block;
+  width: 600px;
+  color: #938065;
+}
+
+.pr_box {
+  width: 1050px;
+}
+
+#activity dl {
+  dt {
+    cursor: pointer;
+  }
+  dd {
+    display: none;
+    margin-left: 0;
+  }
+}
+
+.pr_title {
+  background-color: #993399;
+  color: #FFF;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 8px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.pr_con {
+  clear: both;
+  padding-top: 10px;
+}
+
+td {
+  height: 28px;
+  color: #000000;
+  font-size: 11.0pt;
+  font-family: 宋体;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  height: 28px;
+  color: #000000;
+  font-size: 11.0pt;
+  font-family: 宋体;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+}
+
+#floatService2{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 46px;
+    z-index: 1100;
+    overflow: hidden;
+    height: 311px;
+    .floatbox{
+        overflow: hidden;
+        position: absolute;
+        z-index: 1099;
+        top: 0;
+        left: 0px;
+        width: 196px;
+        height: 311px;
+        a{
+            display: block;float:right
+        }
+    }
+
+    .floatbg01{
+        position: absolute;
+        z-index: 1100;
+        top: 55px;
+        right: 150px;
+        width: 46px;
+        cursor: pointer;
+    }
+}

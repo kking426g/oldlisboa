@@ -1,0 +1,324 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+#banner {
+  height: 440px;
+  margin-top: 0px;
+  position: relative;
+  background: #131313 url(../images/banner.jpg) no-repeat center top;
+}
+
+#sign-out {
+  margin: 30px 0 0 35px;
+}
+
+#content {
+  position: relative;
+  background-color: transparent;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #131313;
+    z-index: -1;
+  }
+}
+
+
+#slidershow {
+  display: inline-block;
+  position: relative;
+  width: 380px;
+  overflow: hidden;
+  li {
+    width: 380px;
+    height: 470px;
+    position: relative;
+    p {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 60px;
+      width: 100%;
+      margin-bottom: 0;
+      padding-left: 25px;
+      color: #a5906d;
+      font-size: 14px;
+      text-align: left;
+      line-height: 60px;
+      background: url(../images/slide_bg.png);
+    }
+  }
+  .cycle-paper {
+    position: absolute;
+    right: 15px;
+    bottom: -7px;
+    color: #7d6a4a;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 100;
+    overflow: hidden;
+    span {
+      float: left;
+      &.cycle-pager-active {
+        color: #e9d479;
+      }
+    }
+  }
+}
+
+#super {
+  display: inline-block;
+  width: 240px;
+  height: 470px;
+  margin: 0 5px;
+  padding-top: 125px;
+  vertical-align: top;
+  background: url(../images/super.jpg);
+  > {
+    span.money {
+      color: #ffe479;
+      font-size: 26px;
+      letter-spacing: 11.5px;
+      text-shadow: 2px 2px 2px #3d1405, -2px -2px 2px #3d1405, 2px -2px 2px #3d1405;
+    }
+    p {
+      margin: 40px 20px 5px;
+      font-size: 14px;
+      border-top: 1px solid #665844;
+      > span.title {
+        display: block;
+        width: 72px;
+        margin: -10px auto 0;
+        text-align: center;
+        color: #d7ae5e;
+        background-color: #181614;
+      }
+    }
+  }
+}
+
+.winner_list {
+  height: 213px;
+  overflow: hidden;
+  .winner_list_con {
+    overflow: hidden;
+    position: relative;
+    height: 210px;
+  }
+}
+
+#super .cycle-slideshow {
+  width: 220px;
+  height: 225px;
+  padding: 0 5px;
+  text-align: left;
+  li {
+    color: #665841;
+    font-size: 12px;
+    line-height: 30px;
+    margin-left: 10px;
+    height: 30px;
+    span.money {
+      color: #e0cf80;
+    }
+  }
+}
+
+#game_labby {
+  display: inline-block;
+  li {
+    width: 360px;
+    height: 150px;
+    margin-bottom: 8px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    &:hover {
+      background-position: center bottom;
+    }
+  }
+  .game_game {
+    background-image: url(../images/game01.png);
+  }
+  li a {
+    display: block;
+    height: 100%;
+  }
+  .game_live {
+    background-image: url(../images/game02.png);
+  }
+  .game_sport {
+    background-image: url(../images/game03.png);
+  }
+}
+
+footer {
+  padding-top: 20px;
+}
+
+
+// /*轮播图*/
+// .banner_home {
+//   width: 726px;
+//     height: 346px;
+//   // margin: 0px auto;
+//   display: inline-block;
+//   .move {
+//     position: absolute;
+//     left: 0;
+//     top: 0px;
+//     width: 100%;
+//     height: 100%;
+//     overflow: hidden;
+//   }
+// }
+
+//首頁圖片
+// .banner{
+//   display: inline-block;
+//     width: 100%;
+//     height: 450px;
+
+// }
+
+
+#slider2{
+  margin: 85px 0 0px 0px;
+  width: 100%;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  ul {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      height: inherit;
+      list-style: none;
+      li {
+          position: relative;
+          display: block;
+          float: left;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 336px;
+          background: #ccc;
+          text-align: center;
+          line-height: 300px;
+      }
+  }
+  a.control_prev, a.control_next {
+      position: absolute;
+      top: 40%;
+      z-index: 9;
+      display: block;
+      padding: 4% 3%;
+      width: auto;
+      height: auto;
+      color: #fff;
+      background: #ffffff00;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 36px;
+      opacity: 0.8;
+      cursor: pointer;
+  }
+  a {
+      &.control_prev{
+          border-radius: 0 2px 2px 0;
+      }
+      &.control_next {
+          right: 0;
+          border-radius: 2px 0 0 2px;
+      }
+      &.control_prev:hover, &.control_next:hover {
+          background: #2a2a2a;
+          -webkit-transition: all 0.2s ease;
+      }
+  }
+}
+
+.banner_home {
+  margin: 0px auto;
+  width: 100%;
+  .move {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    left: 0;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+    .home_slide{
+      position: relative;
+      margin: 0 auto; 
+      height: 100%; 
+      width: 1500px;
+      overflow: hidden;
+    }
+  }
+}
+
+.move ul {
+  position: absolute;
+  background-color: #fff;
+  li {
+    position: absolute;
+    background-color: #fff;
+    img {
+      width: 1500px;
+      height: 440px;
+    }
+  }
+}
+
+
+.ctrl {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 40px;
+  text-align: center;
+  .libs {
+    display: inline-block;
+    margin-left: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    z-index: 50;
+    cursor: pointer;
+  }
+  span.active {
+    background-color: #fff;
+  }
+  .arrow {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    top: 50%;
+    margin-top: -30px;
+    background-color: #333;
+    cursor: pointer;
+    font: 40px/80px "宋体";
+    opacity: .5;
+    color: #fff;
+    text-align: center;
+  }
+  .next {
+    top: -180px;
+    right: 0;
+  }
+  .prev {
+    top: -180px;
+    left: 0;
+  }
+  .arrow:hover {
+    opacity: 1;
+  }
+}
