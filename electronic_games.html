@@ -1,19 +1,19 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>澳门银河娱乐城-诚信第一品牌！</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/public.js"></script>
-    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
-    <script src="js/new_function.js"></script>
-    <link rel="stylesheet" href="css/style_sheet.css">
-    <script>
-        function ShowSubnav(e){
-            $(".subnav").show();
-        }
-    </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>澳门银河娱乐城-诚信第一品牌！</title>
+<link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/public.js"></script>
+<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="js/new_function.js"></script>
+<link rel="stylesheet" href="css/style_sheet.css">
+<script>
+function ShowSubnav(e){
+	$(".subnav").show();
+}
+</script>
 </head>
 
 <body class="main_body">
@@ -33,25 +33,25 @@
         </div>
         <div class="home_nav">
             <div class="main_box">
-                <a class="logo" href="index.html"></a>
+                <a class="logo" href=""></a>
                 <nav>
                     <ul>
                         <li class="home"><a href="index.html">首页<span>Home</span></a></li>
                         <li onMouseMove="ShowSubnav(event)">
                             <a href="live_game.html" data-img="ebet">真人娱乐<span>Live casino</span></a>
                             <ol class="subnav">
-                                <li><a href="" data-img="ebet">eBET梦幻厅</a></li>
-                                <li class="hot"><a href="" data-img="ag">AG女优厅</a></li>
-                                <li><a href="" data-img="bb">BBIN旗舰厅</a></li>
-                                <li class="hot"><a href="" data-img="ab">欧博视讯厅</a></li>
-                                <li class="hot"><a href="" data-img="sun">太阳城电投</a></li>
+                                <li><a href="live_game.html" data-img="ebet">eBET梦幻厅</a></li>
+                                <li class="hot"><a href="live_game.html" data-img="ag">AG女优厅</a></li>
+                                <li><a href="live_game.html" data-img="bb">BBIN旗舰厅</a></li>
+                                <li class="hot"><a href="live_game.html" data-img="ab">欧博视讯厅</a></li>
+                                <li class="hot"><a href="live_game.html" data-img="sun">太阳城电投</a></li>
                             </ol>
                         </li>
                         <li class="hot">
                             <a href="">斗&nbsp;&nbsp;&nbsp;&nbsp;鸡<span>CF Sport</span></a>
                         </li>
                         <li class="lottery hot" onMouseMove="ShowSubnav(event)">
-                            <a href="lottery.html">彩票游戏<span>Lottery</span></a>
+                            <a href="./lottery.html">彩票游戏<span>Lottery</span></a>
                             <ol class="subnav">
                                 <li class="hot"><a href="">BBIN彩票</a></li>
                                 <li><a href="">GT彩票</a></li>
@@ -181,63 +181,151 @@
 
     <div id="content">
         <div class="main_box">
-        	<section id="lobby">
-            	<div class="slideshow">
-                	<div class="swiper-container swiper-container-vertical">
-                    	<div class="swiper-wrapper">
-                            <div class="swiper-slide" data-id="ab">
-                                欧博视讯厅
-                                <span>AB LIVE CASINO</span>
-                            </div>
-                            <div class="swiper-slide" data-id="bb">
-                                BBIN旗舰厅
-                                <span>BBIN LIVE CASINO</span>
-                            </div>
-                            <div class="swiper-slide" data-id="ag">
-                                AG女优厅
-                                <span>AG LIVE CASINO</span>
-                            </div>
-                            <div class="swiper-slide" data-id="ebet">
-                                eBET梦幻厅
-                                <span>eBET LIVE CASINO</span>
-                            </div>
-                            <div class="swiper-slide" data-id="sun">
-                                太阳城电投
-                                <span>SUN LIVE CASINO</span>
-                            </div>
+        	<section id="lobby" ng-controller="LobbiesCtrl">
+            	<div class="slider-left">
+                	<span class="prev"></span>
+                    <div class="main-cell">
+                    	<div class="tempWrap" style="overflow:hidden; position:relative; width:930px">
+                        	<ul class="game-list">
+                            	<li game-box="ag" class="active">
+                                	AG电子
+                                    <span>AG slot machine</span>
+                                </li>
+                                <li game-box="bb">
+                                	BBIN电子
+                                    <span>BBIN slot machine</span>
+                                </li>
+                                <li game-box="mw">
+                                	MW电子
+                                    <span>MW slot machine</span>
+                                </li>
+                                <li game-box="pg">
+                                	PG电子
+                                    <span>PG slot machine</span>
+                                </li>
+                                <li game-box="im">
+                                	IM电子
+                                    <span>IM slot machine</span>
+                                </li>
+                                <li game-box="dt">
+                                	DT电子
+                                    <span>DT slot machine</span>
+                                </li>
+                                <li game-box="Kgame">
+                                	KG电子
+                                    <span>KG slot machine</span>
+                                </li>
+                                <li game-box="KUMA">
+                                	KUMA女优电子
+                                    <span>KUMA slot machine</span>
+                                </li>
+                                <li game-box="vg">
+                                	VG
+                                    <span>VG slot machine</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="next"></span>
+                </div>
+                <div class="MgGame">
+                    <div id="header">
+                        <div class="logo">
+                        </div>
+                        <div id="search">
+                            <form >
+                            	<input placeholder="请输入游戏名称">
+                                <button type="submit"></button>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <ul class="live-con">
-                	<li data-img="ab" style="display:block;"><a href="javascript:void(0)"></a></li>
-                    <li data-img="ag" style="display:none;"><a href="javascript:void(0)"></a></li>
-                    <li data-img="bb" style="display:none;"><a href="javascript:void(0)"></a></li>
-                    <li data-img="ebet" style="display:none;"><a href="javascript:void(0)"></a></li>
-                    <li data-img="sun" style="display:none;"><a href="javascript:void(0)"></a></li>
-                </ul>
-                <ul class="hot-game">
-                	<li data-img="game01"></li>
-                    <li data-img="game02"></li>
-                    <li data-img="game03"></li>
-                    <li data-img="game04"></li>
-                    <li data-img="game05"></li>
-                    <li data-img="game06"></li>
-                </ul>
+                <div style="clear:both;"></div>
+                <div class="nav">
+                    <ul class="game_nav">
+                        <li>游戏分类：</li>
+                        <li class="hb-active">热门游戏</li>
+                        <li>最新游戏</li>
+                        <li>棋牌游戏</li>
+                        <li>老虎机</li>
+                    </ul>
+                </div>
+                <div class="game_con">
+                    <ul id="game-list">
+                        <li>
+                            <div class="game-logo"><img src="images/vg1.png"></div>
+                            <div class="game-text">VG斗地主</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/vg2.png"></div>
+                            <div class="game-text">VG牛牛</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li><li>
+                            <div class="game-logo"><img src="images/BTN_SecretRomance_ZH.png"></div>
+                            <div class="game-text">秘密爱慕者</div>
+                        </li>
+                    </ul>
+                    <ul id="pager">
+                        <li>首页</li>
+                        <li>上一页</li>
+                        <li>page:<span>1</span></li>
+                        <li>下一页</li>
+                        <li>尾页</li>
+                        <li>共<span>20</span>页</li>
+                    </ul>
+                </div>
             </section>
             <script type="text/javascript">
-            	$(".swiper-wrapper .swiper-slide").mouseover(function(){
-					var key = this.dataset.id;
-					$(".live-con li").css("display","none");
-					$("[data-img="+key+"]").css("display","block");
-				})
-
-                $(function(){
-                    console.log(localStorage.getItem("live_option"))
-                    if(localStorage.getItem("live_option")){
-                        $(".live-con li").css("display","none");
-                        $("[data-img="+localStorage.getItem("live_option")+"]").css("display","block");
-                    }
-                })
+			jQuery(".slider-left").slide({mainCell:".main-cell ul",effect:"leftLoop",vis:6,interTime:3000,autoPlay:300,trigger:"click"});
             </script>
         </div>
     </div>
@@ -256,8 +344,7 @@
             <p id="footer_suggest">Copyright © 澳门银河娱乐城 Reserved</p>
         </div>
     </footer>
-    <script src="js/myscroll.js"></script>
-    <script type="text/javascript"> 
+    <script type="text/javascript">
         $(window).load(function () {
             var b_width = $(window).width();
             $("#move img").attr("width",b_width+"px");
@@ -272,33 +359,34 @@
                 effect: 'left' //轮播的改变方式 top || left || fade，不传默认left
             });
         });
-
-        Date.prototype.strftime = function(format){
-            var o = {
-                "M+" :  this.getMonth()+1,  //month
-                "d+" :  this.getDate(),     //day
-                "h+" :  this.getHours(),    //hour
-                "m+" :  this.getMinutes(),  //minute
-                "s+" :  this.getSeconds(), //second
-                "q+" :  Math.floor((this.getMonth()+3)/3),  //quarter
-                "S"  :  this.getMilliseconds() //millisecond
-            }
-            if(/(y+)/.test(format)) {
-                format = format.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
-            }
-            for(var k in o) {
-                if(new RegExp("("+ k +")").test(format)) {
-                format = format.replace(RegExp.$1, RegExp.$1.length==1 ? o[k] : ("00"+ o[k]).substr((""+ o[k]).length));
-                }
-            }
-            return format;
-        }
-
-        function UTCToLocalTimeString(d, format) {    
-            var   timeOffsetInHours = (new Date().getTimezoneOffset()/60)  + 8;    
-            d.setHours(d.getHours() + timeOffsetInHours);
-            return d.strftime(format);
-        }
+	</script>
+	<script src="js/myscroll.js"></script>
+    <script type="text/javascript"> 
+	Date.prototype.strftime = function(format){
+		var o = {
+			"M+" :  this.getMonth()+1,  //month
+			"d+" :  this.getDate(),     //day
+			"h+" :  this.getHours(),    //hour
+			"m+" :  this.getMinutes(),  //minute
+			"s+" :  this.getSeconds(), //second
+			"q+" :  Math.floor((this.getMonth()+3)/3),  //quarter
+			"S"  :  this.getMilliseconds() //millisecond
+		}
+		if(/(y+)/.test(format)) {
+			format = format.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+		}
+		for(var k in o) {
+			if(new RegExp("("+ k +")").test(format)) {
+			format = format.replace(RegExp.$1, RegExp.$1.length==1 ? o[k] : ("00"+ o[k]).substr((""+ o[k]).length));
+			}
+		}
+		return format;
+	}
+	function UTCToLocalTimeString(d, format) {    
+		var   timeOffsetInHours = (new Date().getTimezoneOffset()/60)  + 8;    
+		d.setHours(d.getHours() + timeOffsetInHours);
+		return d.strftime(format);
+	}
 	</script>
     <script >
 		setInterval(function(){var time = UTCToLocalTimeString(new Date(),'yyyy/MM/dd hh:mm:ss');document.getElementById("top_time").innerHTML = time;},1000);
