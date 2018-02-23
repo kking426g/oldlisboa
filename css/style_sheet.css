@@ -4211,7 +4211,7 @@ ul#login_nav {
     ul#login_nav > li > a:hover {
       color: #ffd053; }
 
-#sign-out {
+.sign-out {
   display: inline-block;
   height: 42px;
   width: 152px;
@@ -4225,7 +4225,7 @@ ul#login_nav {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px; }
-  #sign-out:hover {
+  .sign-out:hover {
     background-color: #ffd053; }
 
 #news {
@@ -4369,9 +4369,9 @@ footer {
   background-repeat: no-repeat;
   background-position: center top; }
   .banner.banner_ele {
-    background-image: url(/images/banner_game.jpg); }
+    background-image: url(../images/banner_game.jpg); }
   .banner.banner_livegame {
-    background-image: url(/images/banner_live.jpg); }
+    background-image: url(../images/banner_live.jpg); }
   .banner.banner_lotterygame {
     background-image: url(../images/banner_caipiao.jpg); }
   .banner.banner_sportgame {
@@ -4786,7 +4786,7 @@ footer {
   position: relative;
   background: #131313 url(../images/banner.jpg) no-repeat center top; }
 
-#sign-out {
+.home_signout {
   margin: 30px 0 0 35px; }
 
 #content {
@@ -5167,6 +5167,9 @@ footer {
     background-image: url(../images/link05.png); }
   #lobby > .hot-game li[data-img="game06"] {
     background-image: url(../images/link06.png); }
+
+.hot_game {
+  margin-bottom: 10px; }
 
 #lottery {
   padding: 20px 0; }

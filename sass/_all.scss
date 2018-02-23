@@ -611,7 +611,7 @@ ul {
   }
 }
 
-#sign-out {
+.sign-out {
   display: inline-block;
   height: 42px;
   width: 152px;
@@ -795,18 +795,17 @@ footer {
   }
 }
 
-
 .banner{
   height: 385px;
   margin-top: -90px;
   background-repeat: no-repeat;
   background-position: center top;
   &.banner_ele{
-    background-image: url(/images/banner_game.jpg);
+    background-image: url(../images/banner_game.jpg);
   }
 
   &.banner_livegame{
-    background-image: url(/images/banner_live.jpg);
+    background-image: url(../images/banner_live.jpg);
   }
   &.banner_lotterygame{
     background-image: url(../images/banner_caipiao.jpg);

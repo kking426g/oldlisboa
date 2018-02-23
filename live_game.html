@@ -103,67 +103,52 @@
         </div>
     </header>
         
-    <div id="banner">
-        <div class="banner_home" id="banner1">
-            <!-- 添加图片 -->
-            <div class="move" id="move">
-                <div class="home_slide">
-                    <ul>
-                        <li><img src="images/home_banner1.jpg"></li>
-                        <li><img src="images/home_banner2.jpg"></li>
-                        <li><img src="images/home_banner3.jpg"></li>
-                        <li><img src="images/home_banner4.jpg"></li>
+    <div class="banner banner_livegame">
+        <div class="main_box">
+            <div class="login_box">
+                <form name="" id="" action="" method="" style="display:none;">
+                    <span>会员登录</span>
+                    <input type="text" class="username" name="" placeholder="账号">
+                    <input type="text" class="userpassword" name="" placeholder="密码">
+                    <div class="check_code">
+                        <input type="text" class="" name="" placeholder="验证码">
+                        <img id="checkNum_img" src="images/ValidateCode.jpg">
+                    </div>
+                    <button class="login_btn btn_hover">
+                        <span class="non_hover">立即登入</span>
+                        <span class="hover">立即登入</span>
+                    </button>
+                        <button class="register_btn btn_hover">
+                        <span class="non_hover"><a href="./register.html">赌场开户</a></span>
+                        <span class="hover"><a href="./register.html"></a>赌场开户</span>
+                    </button>
+                    <ul class="login_nav">
+                        <li class=""><a href="" onClick="alert('忘记账号密码，请联系在线客服人员取回！')">忘记密码</a></li>
+                        <li class=""><a href="">免费试玩</a></li>
                     </ul>
-                    <!-- 添加控制条 -->
-                    <div class="ctrl" id="ctrl"></div>
-                </div>
-            </div>
-            <div class="main_box">
-                <div class="login_box home_loginbox">
-                    <form name="" id="" action="" method="" style="display:none;">
-                        <span>会员登录</span>
-                        <input type="text" class="username" name="" placeholder="账号">
-                        <input type="text" class="userpassword" name="" placeholder="密码">
-                        <div class="check_code">
-                            <input type="text" class="" name="" placeholder="验证码">
-                            <img id="checkNum_img" src="images/ValidateCode.jpg">
-                        </div>
-                        <button class="login_btn btn_hover">
-                            <span class="non_hover">立即登入</span>
-                            <span class="hover">立即登入</span>
-                        </button>
-                            <button class="register_btn btn_hover">
-                            <span class="non_hover"><a href="./register.html">赌场开户</a></span>
-                            <span class="hover"><a href="./register.html"></a>赌场开户</span>
-                        </button>
-                        <ul class="login_nav">
-                            <li class=""><a href="" onClick="alert('忘记账号密码，请联系在线客服人员取回！')">忘记密码</a></li>
-                            <li class=""><a href="">免费试玩</a></li>
-                        </ul>
-                    </form>
-                    <div class="login_info_box">
-                        <ul class="login_info">
-                            <li>
-                                账号：<span class="account">cyt827</span>
-                                <a href="" id="mailbox" title="站内信"></a>
-                            </li>
-                            <li>
-                                账户余额：<span class="account">$<span id="balance">0.00</span></span>
-                                <a href="">额度转换</a>
-                            </li>
+                </form>
+                <div class="login_info_box">
+                    <ul class="login_info">
+                        <li>
+                            账号：<span class="account">cyt827</span>
+                            <a href="" id="mailbox" title="站内信"></a>
+                        </li>
+                        <li>
+                            账户余额：<span class="account">$<span id="balance">0.00</span></span>
+                            <a href="">额度转换</a>
+                        </li>
+                    </ul>
+                    <ul id="login_nav">
+                        <li><a href="./play_record.html">投注记录</a></li>
+                        <li><a href="./deposit.html">线上存款</a></li>
+                        <li><a href="./withdrawal.html">线上取款</a></li>
                         </ul>
                         <ul id="login_nav">
-                            <li><a href="./play_record.html">投注记录</a></li>
-                            <li><a href="./deposit.html">线上存款</a></li>
-                            <li><a href="./withdrawal.html">线上取款</a></li>
-                            </ul>
-                            <ul id="login_nav">
-                            <li><a href="./transaction_record.html">交易记录</a></li>
-                            <li><a href="./personal_info.html">未读信息(3)</a></li>
-                            <li><a href="">修改密码</a></li>
-                        </ul>
-                        <a href="" id="sign-out">退出账户</a>
-                    </div>
+                        <li><a href="./transaction_record.html">交易记录</a></li>
+                        <li><a href="./personal_info.html">未读信息(3)</a></li>
+                        <li><a href="">修改密码</a></li>
+                    </ul>
+                    <a href="" class="sign-out">退出账户</a>
                 </div>
             </div>
         </div>
@@ -215,7 +200,7 @@
                     <li data-img="ebet" style="display:none;"><a href="javascript:void(0)"></a></li>
                     <li data-img="sun" style="display:none;"><a href="javascript:void(0)"></a></li>
                 </ul>
-                <ul class="hot-game">
+                <ul class="hot-game hot_game">
                 	<li data-img="game01"></li>
                     <li data-img="game02"></li>
                     <li data-img="game03"></li>

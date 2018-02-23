@@ -22,7 +22,7 @@
             <div class="main_box">
                 <div class="top_time">中国时间 - <span id="top_time"></span></div>
                 <ul id="top-nav">
-                	<li><a target="_blank" href="./dl_index.html">代理联盟</a></li>
+                	<li><a target="_blank" href="dl_index.html">代理联盟</a></li>
                     <li id="language">
                     	<span data-language="zh-CN"><a href=""></a></span>
                         <span data-language="zh-TW"><a href=""></a></span>
@@ -37,29 +37,29 @@
                 <ul>
                     <li class="home"><a href="index.html">首页<span>Home</span></a></li>
                     <li onMouseMove="ShowSubnav(event)">
-                        <a href="">真人娱乐<span>Live casino</span></a>
+                        <a href="live_game.html" data-img="ebet">真人娱乐<span>Live casino</span></a>
                         <ol class="subnav">
-                            <li><a href="">eBET梦幻厅</a></li>
-                            <li class="hot"><a href="">AG女优厅</a></li>
-                            <li><a href="">BBIN旗舰厅</a></li>
-                            <li class="hot"><a href="">欧博视讯厅</a></li>
-							<li class="hot"><a href="">太阳城电投</a></li>
+                            <li><a href="live_game.html" data-img="ebet">eBET梦幻厅</a></li>
+                            <li class="hot"><a href="live_game.html" data-img="ag">AG女优厅</a></li>
+                            <li><a href="live_game.html" data-img="bb">BBIN旗舰厅</a></li>
+                            <li class="hot"><a href="live_game.html" data-img="ab">欧博视讯厅</a></li>
+                            <li class="hot"><a href="live_game.html" data-img="sun">太阳城电投</a></li>
                         </ol>
                     </li>
                     <li class="hot">
                         <a href="">斗&nbsp;&nbsp;&nbsp;&nbsp;鸡<span>CF Sport</span></a>
                     </li>
                     <li class="lottery hot" onMouseMove="ShowSubnav(event)">
-                        <a href="">彩票游戏<span>Lottery</span></a>
+                        <a href="lottery.html">彩票游戏<span>Lottery</span></a>
                         <ol class="subnav">
                             <li class="hot"><a href="">BBIN彩票</a></li>
                             <li><a href="">GT彩票</a></li>
                         </ol>
                     </li>
                     <li class="hot" onMouseMove="ShowSubnav(event)">
-                        <a href="">电子游戏<span>Slots</span></a>
+                        <a href="electronic_games.html">电子游戏<span>Slots</span></a>
                         <ol class="subnav">
-                        	<li class="hot"><a href="">AG电子</a></li>
+                            <li class="hot"><a href="">AG电子</a></li>
                             <li class="hot"><a href="">BBIN电子</a></li>
                             <li class="hot"><a href="">MW电子</a></li>
                             <li><a href="">PG电子</a></li>
@@ -77,7 +77,7 @@
                         </ol>
                     </li>
                     <li class="sport" onMouseMove="ShowSubnav(event)">
-                        <a href="">体育投注<span>Sports</span></a>
+                        <a href="./sports.html">体育投注<span>Sports</span></a>
                         <ol class="subnav">
                             <li><a href="">BBIN体育</a></li>
                             <li class="hot"><a href="">IM体育</a></li>
@@ -145,24 +145,23 @@
                         <li><a href="./personal_info.html">未读信息(3)</a></li>
                         <li><a href="">修改密码</a></li>
                     </ul>
-                    <a href="" id="sign-out">退出账户</a>
+                    <a href="" class="sign-out">退出账户</a>
                 </div>
             </div>
         </div>
     </div>
-    <div id="news" class="home_news">
-        <div class="main_box pr_box">
-            <div class="latest_news">
-                <marquee scrollamount="3" scrolldelay="100" direction="left" onmouseover="this.stop();" onmouseout="this.start();"  onclick="HotNewsHistory();" style="cursor: pointer;color: #c9ad80;font-size: 12px;line-height:30px;">
-                澳门银河娱乐城测试新版面
+    
+    <div id="news"> 
+        <div class="main_box">
+            <div class="marquee">
+                <marquee scrollamount="3" scrolldelay="100" direction="left" onmouseover="this.stop();" onmouseout="this.start();" onclick="HotNewsHistory();" style="cursor: pointer;color: #c9ad80;font-size: 12px;line-height:30px;">
+                    澳门银河娱乐城测试新版面
                 </marquee>
             </div>
         </div>
     </div>
     <div id="content">
         <div class="main_box pr_box">
-        	<link href="css/register.css" rel="stylesheet">
-            <link href="./css/promotions.css" rel="stylesheet">
             <div id="un-lobby">
                 <aside class="aside">
                 	<div class="aside_game">
