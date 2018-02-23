@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>会员中心</title>
+<link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+<link href="./css/vip_center.css" rel="stylesheet">
+<link href="./css/laydate/laydate.css" rel="stylesheet">
+<link href="./css/laydate/laydate_skin.css" rel="stylesheet">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/public.js"></script>
+<script src="js/laydate/laydate.js"></script>
+<script language="javascript">
+    $(function() {
+        laydate.skin('dahong');
+    });
+
+    $(function() {
+
+            var pagetotal = "0";
+            var page = "1";
+
+            var text = "";
+            if (pagetotal > 0) {
+                for (var i = 1; i <= pagetotal; i++) {
+                    if (i == page) {
+                        text += "<option value='user_3_b?page=" + i + "&type1=1&uid=A598677AA789ED66A284735' selected>" + i + "</option>";
+                    } else {
+                        text += "<option value='user_3_b?page=" + i + "&type1=1&uid=A598677AA789ED66A284735'>" + i + "</option>";
+                    }
+                }
+            }
+            $("#page").append(text);
+            $("#page").change(function() {
+
+                var abc = $("#page option:selected").val();
+                location.href = abc;
+            });
+        }
+    );
+</script>
+<script language="javascript">
+    function compareDate() {
+        var dateAStr = $("input[id=endDate]").val();
+        var arrA = dateAStr.split("-");
+        var dateA = new Date(arrA[0] + 1, arrA[1] + 1, arrA[2] + 1);
+        var dateAT = dateA.getTime();
+        var dateBStr = $("input[id=beginDate]").val();
+        var arrB = dateBStr.split("-");
+        var dateB = new Date(arrB[0 + 1] + 1, arrB[1] + 1, arrB[2] + 1);
+        var dateBT = dateB.getTime();
+        if (dateAT < dateBT) {
+            alert("开始时间要小于结束时间");
+            return false;
+        } else {
+            $("#chaxun").submit();
+            return true;
+        }
+    }
+</script>
+</head>
+
+<body class="main_body">
+    <header class="clear">
+        <img class="logo" src="images/vip_logo.png">
+        <div class="nav">
+        	<ul>
+            	<li>
+                	<a href="./my_account.html">基本资讯</a>
+                </li>
+                <li class="current">
+                	<a href="./personal_revise.html">个人资讯</a>
+                </li>
+                <li>
+                	<a href="./bank_setting.html">银行设定</a>
+                </li>
+            </ul>
+            <a class="deposit_btn" href="./deposit.html">线上存款</a>
+        </div>
+        <div class="time">中国时间：2018/1/29 1:23:35</div>
+    </header>
+    <div class="content">
+    	<div class="vip_nav">
+        	<div class="title"><img src="images/memIcon.png">会员专区</div>
+            <div class="nav_list">
+            	<ul>
+                	<li class="current"><a href="./my_account.html">我的账户</a></li>
+                    <li><a href="./deposit.html">银行交易</a></li>
+                    <li><a href="./transaction_record.html">交易记录</a></li>
+                </ul>
+            </div>
+            <div class="title title2">
+            	<img src="images/msgIcon.png">信息公告
+            </div>
+            <div class="nav_list">
+            	<ul>
+                	<li><a href="./latest_news.html">最新信息</a></li>
+                    <li><a href="./personal_info.html">个人信息</a></li>
+                    <li><a href="./sport_placard.html">游戏公告</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+        	<div class="main_box">
+            	<div class="main_top"></div>
+                <div class="title">个人资讯</div>
+                <div class="paytinfogs">
+                	<p>温馨提示：</p>
+                    <p>1. 您可以在本页设定您的个人信息、联系方式以及修改登入密码。</p>
+                    <p>2. 修改登入密码后，请立即登出后以新密码重新登入。</p>
+                    <p>3. 建议您不定期修改您的登入密码，避免使用容易取得的个人信息作为登入密码，例如电话号码、生日、123456、qwerty…等。</p>
+                    <p>4. 请务必提供正确的联系方式，方便客服中心与您主动联系。</p>
+                </div>
+                <div class="vip_form">
+                	<h1><span>变更联系资料</span></h1>
+                    <form action="" method="">
+                    	<div class="form_bg_box">
+                        	<div class="form_bg">
+                            	<h2></h2>
+                                <table style="margin:-35px 0 0 50px;" border="0" cellpadding="0" cellspacing="0">
+                                	<tbody>
+                                    	<tr>
+                                        	<td class="keyin">
+                                            	<p>
+                                                	<em>昵称：</em>
+                                                    <input type="text" size="12" maxlength="12">
+                                                </p>
+                                                <p>
+                                                	<em>生日：</em>
+                                                    <input type="text" size="12" maxlength="12">
+                                                </p>
+                                                <p>
+                                                	<em>电子邮件：</em>
+                                                    <input type="text" size="12" maxlength="12">
+                                                </p>
+                                                <p>
+                                                	<em>即时通讯：</em>
+                                                    <input type="text" size="12" maxlength="12">
+                                                </p>
+                                            </td>
+                                            <td class="info">
+                                            	<span><tt class="bb">说明:</tt></span>
+                                                <span><tt>1.</tt> 请务必提供正确的联系方式<br>方便客服中心与您主动联系。</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="vip_bottom">
+                            	<input type="submit" value="确认" class="yes">
+                                <input type="reset" value="重置" class="no">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="vip_form">
+                	<h1><span>更改密码</span></h1>
+                    <form action="" method="">
+                    	<div class="form_bg_box">
+                        	<div class="form_bg">
+                            	<h2></h2>
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                	<tbody>
+                                    	<tr>
+                                        	<td class="keyin">
+                                            	<p>
+                                                	<em>现用密码：</em>
+                                                    <input type="password" size="12" maxlength="12">
+                                                </p>
+                                                <p>
+                                                	<em>新密码：</em>
+                                                    <input type="password" size="12" maxlength="12">
+                                                </p>
+                                                <p>
+                                                	<em>确认密码：</em>
+                                                    <input type="password" size="12" maxlength="12">
+                                                </p>
+                                            </td>
+                                            <td class="info">
+                                            	<span><tt class="bb">说明:</tt></span>
+                                                <span><tt>1.</tt> 您的新密码必须由6-12个字母和数字<br>(A-Z 和 0-9)组成。</span>
+                                                <span><tt>2.</tt> 您的新密码不能和现用的密码相同。</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="vip_bottom">
+                            	<input type="submit" value="确认" class="yes">
+                                <input type="reset" value="重置" class="no">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div style="padding:15px;"></div>
+            </div>
+        </div>
+    </div>
+    <footer>Copyright@澳门银河娱乐城 Reserved</footer>
+</body>
+</html>
